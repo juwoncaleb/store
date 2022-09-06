@@ -8,9 +8,8 @@ function Header() {
   return (
     
     <div className="">
-      {/* HEADER ONE   */}
+      
       <div className="flex justify-between">
-        {/* TAG ONE */}
         <div className="flex justify-between lefticon">
           <img
             className="navIcon"
@@ -23,13 +22,12 @@ function Header() {
         </div>
 
 
-        {/* TAG TWO */}
-
-        <div onClick={() => router.push('/')} >
-          <img className="lacoste" src="./logos.png" />
+        <div onClick={() => router.push('/casual')}>
+          <img onClick={() => router.push('/')}className="lacoste cursor-pointer" src="./logos.png" />
         </div>
 
-        {/* TAG THREE */}
+        
+        
         <div className="flex justify-around rightIcon">
           <img
             className="navIcon"

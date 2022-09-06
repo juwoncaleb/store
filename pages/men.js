@@ -7,12 +7,13 @@ import { useRouter } from 'next/router'
 import Header from "./components/header";
 import Footer from "./components/Footer";
 
-
+// AUTHENTICATION
+import {useSession , signIn, signOut} from "next-auth/react"
 export default function men() {
   const router = useRouter()
+const {data:session} = useSession()
 
 
-  const [filter, setFilter] = useState("")
   return (
     <div className="newBack">
             <Header/>
@@ -32,8 +33,8 @@ export default function men() {
             <hr className="textline" />
 
           </div>
-          <div className=" middle"  onClick={() => router.push('/casual')}>
-            <img className=" middleImage " src="bro.jfif" />
+          <div className=" middle"  >
+            <img  onClick={() => router.push('/casual')} className=" middleImage " src="bro.jfif" />
             <p className=" text-2xl flex  "> Casual</p>
             <hr className="textline_2" />
 

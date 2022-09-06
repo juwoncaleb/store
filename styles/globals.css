@@ -44,6 +44,7 @@
 .moon {
   margin-right: 30px;
   height: 28px !important;
+  cursor: pointer;
 }
 .border1 {
   border: 0.7px solid black;
