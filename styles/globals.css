@@ -1,26 +1,582 @@
-html,
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* HEADER */
+.navIcon {
+  height: 30px;
+  margin-top: 20px;
+}
+
+.backgroundImage {
+  object-fit: cover;
+}
+
+.lacoste {
+  width: 130px;
+}
+
+.lefticon {
+  width: 100px;
+
+  margin-left: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .lefticon {
+    margin-left: 50px;
+  }
+}
+.rightIcon {
+  margin-right: 100px;
+  width: 150px;
+}
+@media only screen and (max-width: 768px) {
+  .rightIcon {
+    margin-right: 50px;
+  }
+}
+.moon {
+  margin-right: 30px;
+  height: 28px !important;
+}
+.border1 {
+  border: 0.7px solid black;
+  max-width: 1710px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .border1 {
+    border: 0.7px solid black;
+    max-width: 1235px;
+    margin-left: 60px;
+    margin-right: 50px;
+  }
+}
+.headerText {
+  font-family: Archivo;
+  font-weight: 700;
+}
+.headerText,
+p {
+  text-align: center;
+}
+.mainText {
+  text-align: center;
+  position: relative;
+  top: 600px;
+}
+.mainText_one {
+  font-family: Archivo;
+  font-weight: 900;
+
+  font-size: 75px;
+}
+.mainText_sub {
+  font-family: Archivo;
+  font-weight: 200;
+  font-size: 19px;
+  position: relative;
+  bottom: 30px;
+}
+.sub {
+  position: relative;
+  bottom: 30px;
+}
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+}
+.backgroundImage {
+  height: 1000px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 565px) {
+  .backgroundImage {
+    height: 80vh;
+  }
+}
+.landingPage_text {
+  position: relative;
+  top: 80px;
+}
+.landingPage_MainText {
+  font-family: Mukta;
+}
+.landingPage_subText {
+  font-family: Archivo;
+
+  font-style: italic;
+  font-size: 20px;
+}
+.landingPage_secondPage {
+  position: relative;
+  top: 200px;
+}
+.image1 {
+  max-height: 400px;
+  padding-left: 20px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .landingPage_secondPage {
+    display: flex;
+    justify-content: center;
+  }
+}
+.category {
+  position: relative;
+  top: 180px;
+  font-family: Archivo;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+.catergory_subs {
+  font-family: Archivo;
+  font-weight: 600;
+}
+.lines {
+  border: 3px solid black;
+  position: relative;
+  top: 500px;
+  padding-top: 100px;
+  margin-bottom: 100pxb;
+}
+.bar {
+  position: relative;
+  top: 300px;
+  height: 900px;
+}
+.bars {
+  border: 1px solid black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lineBar{
+  position: relative;
+}
+.line {
+  position: relative;
+  bottom: 250px;
+}
+
+.footwear {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  color: white;
+  text-shadow: 5px 5px black;
+}
+#black {
+  color: black;
+  text-shadow: 0px 0px black;
+}
+.logo1 {
+  width: 100px;
+}
+.tat {
+  width: 300px;
+  position: relative;
+  top: 180px;
+  margin-left: 75%;
+}
+.essential_text{
+  font-family: Archivo;
+  font-weight: 900;
+  position: relative;
+  left: 20px;
+}
+.recommendation {
+  position: relative;
+  top: 100px;
+}
+.recommend_img1 {
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.recommend_img2 {
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.recommend_img0 {
+  height: 480px;
+  width: 800px;
+}
+.inside {
+  width: 70px;
+  height: 50px;
+}
+.Lacoste_inside {
+  position: relative;
+  font-size: 25px;
+  margin-left: 5%;
+  font-weight: 900;
+  font-family: Mukta;
+
+}
+
+h1 {
+  color: coral;
+}
+.grid-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.grid-container div {
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+  border: solid 2px black;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+.grid-container div img {
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+.grid-container div p {
+  margin: 5px 0;
   padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-align: center;
+  font-style: italic;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.essentials {
+  position: relative;
+  top: 450px;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media only screen and (max-width: 1024px) {
+  .essentials {
+    position: relative;
+    top: 350px;
   }
-  body {
-    color: white;
-    background: black;
-  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10vmin;
+  overflow: hidden;
+  transform: skew(5deg);
+}
+.container .card {
+  flex: 1;
+  transition: all 1s ease-in-out;
+  height: 75vmin;
+  position: relative;
+}
+.container .card .card__head {
+  color: black;
+  background: rgba(255, 30, 173, 0.75);
+  padding: 0.5em;
+  transform: rotate(-90deg);
+  transform-origin: 0% 0%;
+  transition: all 0.5s ease-in-out;
+  min-width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1em;
+  white-space: nowrap;
+  font-weight: 600;
+  font-family: Archivo;
+
+}
+.container .card:hover {
+  flex-grow: 10;
+}
+.container .card:hover img {
+  filter: grayscale(0);
+}
+.container .card:hover .card__head {
+  text-align: center;
+  top: calc(100% - 2em);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 2em;
+  transform: rotate(0deg) skew(-5deg);
+}
+.container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+  filter: grayscale(100%);
+}
+.container .card:not(:nth-child(5)) {
+  margin-right: 1em;
+}
+.recommended {
+  position: relative;
+  top: 300px;
+}
+.lg{
+  position: relative;
+  top: 150px;
+  margin-left: 5%;
+}
+.recommended_text {
+ position: relative;
+ left: 20px;
+  font-family: Archivo;
+  font-weight: 900;
+}
+.recomend_logo{
+  width: 50px;
+}
+.world{
+  margin-left: 5%;
+}
+.lacoste_Text{
+  position: relative;
+  left: 20px;
+}
+.footer{
+  position: relative;
+  top: 100px;
+  background-color: #0C090A;
+  color: white;
+  font-family: Archivo;
+
+}
+.icon{
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.emailLine{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.borderLine{
+  border: 2px solid white;
+  width: 80%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.footerMenu{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.SignUpButton{
+  background-color: aliceblue;
+  color: black;
+  height: 50px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.email{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.sign{
+  position: relative;
+  top: 10px;
+}
+.footerIcon{
+  width: 20px;
+}
+.footerMain{
+  font-size: 18px;
+  font-family: Archivo;
+  font-weight: 700;
+}
+.but{
+  background-color: red;
+}
+.lastfooter{
+  background-color: white;
+  font-family: Archivo;
+color: #0C090A;
+font-weight: 700;
+}
+.lastIcon{
+  width: 40px;
+  height: 40px;
+}
+.payment{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.shipping{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.loadIcon{
+  position: relative;
+  top: 20px;
+}
+.main {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #cb7cef;
+}
+
+.heading {
+	font-size: 35px;
+	color: white;
+}
+.newBack{
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.buttonColors{
+background-color: darkcyan;
+padding: 10px;
+}
+.gridsystem{
+  background-color: red;
+  height: 100px;
+  width: 100px;
+}
+.newgrid{
+  background-color: aqua;
+  height: 100px;
+  width: 100px;
+}
+.menStyle{
+  margin-top: 100px;
+}
+.menStyleGrid{
+ position: relative;
+ left: 10%;
+ bottom: 100px;
+}
+.menStyle{
+  height: 400px;
+}
+.rev{
+  height: 500px;
+}
+.middle{
+  position: relative;
+  right: 150px;
+}
+.SecondTab{
+ margin-top: 200px;
+}
+.explore{
+  margin-top: 100px;
+  height: 100px;
+  width: 200px;
+  color: white;
+  background-color: black;
+ 
+}
+.middleImage{
+  height: 670px;
+}
+.exploreButton{
+  height: 50px;
+  background-color: #0C090A;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  color: white;
+}
+
+.exploreText{
+  margin: auto;
+}
+.thirdTab{
+  margin-top: 150px;
+}
+.thirdTabLine{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+.fourthTab{
+  margin-bottom: 150px;
+}
+.textline{
+  width: 100px;
+  border: 0.5px solid black;
+}
+.textline_2{
+  width: 50px;
+  border: 0.5px solid black;
+}
+.textline_3{
+  width: 50px;
+  border: 0.5px solid black;
+}
+.textline_4{
+  width: 60px;
+  border: 0.5px solid black;
+}
+.textline_5{
+  width: 30px;
+  border: 0.5px solid black;
+}
+.textline_6{
+  width: 40px;
+  border: 0.5px solid black;
+}
+.sectionMainHeader{
+  margin-bottom: 100px;
+  position: relative;
+bottom: 100px;
+}
+.menStyleGrid_third{
+  margin-top: 100px;
+}
+.lastTab{
+  position: relative;
+  bottom: 150px;
+}
+.topPick{
+  height: 400px;
+}
+.lastTabText{
+  position: relative;
+  bottom: 70px;
 }
