@@ -64,6 +64,9 @@
   font-family: Archivo;
   font-weight: 700;
 }
+.smallerText{
+  font-family: Archivo;
+}
 .headerText,
 p {
   text-align: center;
@@ -580,4 +583,10 @@ bottom: 100px;
 .lastTabText{
   position: relative;
   bottom: 70px;
+}
+.loginButton{
+  border: 1px solid black;
+  height: 60px;
+  width: 100px;
+  background-color: red;
 }
