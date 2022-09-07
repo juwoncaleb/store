@@ -1,10 +1,7 @@
-import React from 'react'
-import { useRouter } from 'next/router'
+import { useSession, signIn, signOut } from "next-auth/react"
 
-export default function auth() {
-    const router = useRouter()
-
-    return (
+export default function Component() {
+  return (
         <div className='flex justify-around'>
             {/* FORM */}
 
@@ -50,6 +47,7 @@ export default function auth() {
                 <p className='smallerText text-4xl font-bold mt-4'>Dress like you’re already famous</p>
                 <p className='smallerText text-4xl font-bold mt-4' >Simply elegant.</p>
             </div>
-        </div>
-    )
+            </div>
+    
+  )
 }
