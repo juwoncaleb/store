@@ -12,7 +12,7 @@ export default function auth() {
                 <img onClick={() => router.push('/')} className="lacoste cursor-pointer" src="./logos.png" />
 
 
-                <div className='mt-40'>
+                <div className='mt-20'>
 
                     <p className=' text-4xl font-medium headerText '>Welcome to Lacoste </p>
                     <p className='smallerText text-1xl  mt-6'>Please enter your account details</p>
@@ -39,7 +39,7 @@ export default function auth() {
                         <p className="smallerText mt-2">Login</p>
                     </div>
                 </div>
-                <p className="smallerText mt-4">Dont have an account ? <span className='signUp'>Sign up for free</span></p>
+                <p className="smallerText mt-4">Dont have an account ? <span className='signUp cursor-pointer' onClick={() => router.push('/signUp')}>Sign up for free</span></p>
             </div>
 
 
