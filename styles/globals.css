@@ -610,3 +610,18 @@ bottom: 100px;
   height: 40px;
   background-color: white;
 }
+.buttonLogin{
+  border: 2px solid black;
+  background-color: #0C090A;
+  color: white;
+  border-radius: 5px;
+  height: 50px;
+}
+.signUp{
+  color: red;
+}
+.signUpImg{
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}

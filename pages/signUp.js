@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-export default function auth() {
+export default function signUp() {
     const router = useRouter()
 
     return (
@@ -46,8 +46,8 @@ export default function auth() {
 
             {/* IMAGE SECTION */}
             <div>
-                <img onClick={() => router.push('/')} className=" mt-10" src="./trevv.png" />
-                <p className='smallerText text-4xl font-bold mt-4'>Dress like you’re already famous</p>
+                <img onClick={() => router.push('/')} className=" signUpImg mt-10" src="./kofi.jpg" />
+                <p className='smallerText text-4xl font-bold mt-4'>Life is not Perfect but Your Outfit Can be!</p>
                 <p className='smallerText text-4xl font-bold mt-4' >Simply elegant.</p>
             </div>
         </div>
