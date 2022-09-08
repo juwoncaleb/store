@@ -29,7 +29,7 @@ function Header() {
         
         
         <div className="flex justify-around rightIcon">
-          <img
+          <img onClick={() => router.push('/auth')}
             className="navIcon"
             src="https://img.icons8.com/ios/50/undefined/search--v3.png"
           />

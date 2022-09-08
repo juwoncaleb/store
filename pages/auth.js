@@ -1,6 +1,9 @@
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/router'
 
 export default function Component() {
+    const router = useRouter()
+
   return (
         <div className='flex justify-around'>
             {/* FORM */}
