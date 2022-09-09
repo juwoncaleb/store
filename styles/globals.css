@@ -625,3 +625,20 @@ bottom: 100px;
   margin-left: auto;
   margin-right: auto;
 }
+.GreyText{
+  color: gray;
+}
+.itemHeader{
+  font-family: Archivo;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 5%;
+}
+.itemHeader_Main{
+  font-family: Archivo;
+  font-weight: 900;
+  margin-top: 50px;
+  margin-left: 5%;
+
+
+}

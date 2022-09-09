@@ -28,19 +28,19 @@ const {data:session} = useSession()
 
         <div class="grid grid-cols-3 gap-10 menStyleGrid">
           <div className=""  onClick={() => router.push('/summerFine')}>
-            <img className=" menStyle " src="koofo.jpg" />
-            <p className="headerText text-2xl flex  "> Summer Fine</p>
+            <img className=" menStyle cursor-pointer  " src="koofo.jpg" />
+            <p className="headerText text-2xl flex cursor-pointer  "> Summer Fine</p>
             <hr className="textline" />
 
           </div>
           <div className=" middle"  >
-            <img  onClick={() => router.push('/casual')} className=" middleImage " src="bro.jfif" />
+            <img  onClick={() => router.push('/casual')} className="cursor-pointer  middleImage " src="bro.jfif" />
             <p className=" text-2xl flex  "> Casual</p>
             <hr className="textline_2" />
 
           </div>
           <div className="menStyleGrid_third"  onClick={() => router.push('/office')}>
-            <img className=" josh " src="work.jpg" />
+            <img className="cursor-pointer  josh " src="work.jpg" />
             <p className="headerText text-2xl flex  "> Office</p>
             <hr className="textline_3" />
 
@@ -49,20 +49,20 @@ const {data:session} = useSession()
         </div>
 
         <div class="grid grid-cols-3 gap-10  mt-20 menStyleGrid">
-          <div className=""  onClick={() => router.push('/comfort')}>
+          <div className="cursor-pointer "  onClick={() => router.push('/comfort')}>
             <img className=" menStyle " src="ss.jpg" />
             <p className="headerText text-2xl flex  "> Comfort</p>
             <hr className="textline_4" />
 
           </div>
           <div className=" middle"  onClick={() => router.push('/retro')}>
-            <img className="middleImage" src="jerry.jpg" />
+            <img className="middleImage cursor-pointer " src="jerry.jpg" />
             <p className="headerText text-2xl flex  " > Retro</p>
             <hr className="textline_5" />
 
           </div>
           <div className="menStyleGrid_third"  onClick={() => router.push('/urban')}>
-            <img className=" rev " src="sk.jpg" />
+            <img className="cursor-pointer  rev " src="sk.jpg" />
             <p className="headerText text-2xl flex  "> Urban</p>
             <hr className="textline_6" />
 

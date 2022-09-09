@@ -14,7 +14,12 @@
     "next-auth": "^4.10.3",
     "postcss": "^8.4.16",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.5",
+    "swiper": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "8.23.0",
