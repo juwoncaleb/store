@@ -37,7 +37,8 @@ function Header() {
             className="navIcon"
             src="https://img.icons8.com/ios/50/undefined/user--v3.png"
           />
-          <img
+          <img 
+          onClick={() => router.push('/auth')}
             className="navIcon"
             src="https://img.icons8.com/ios/50/undefined/shopping-bag--v1.png"
           />
