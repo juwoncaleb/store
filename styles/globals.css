@@ -775,60 +775,69 @@ tr:nth-child(even) {
 .cartImg {
   width: 200px;
 }
-.color{
+
+.color {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-background-color: red;
-}
-.black{
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-background-color: black;
+  background-color: red;
 }
 
-.nameOfItem{
+.black {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.nameOfItem {
   width: 70%;
 }
-.checkoutHeader{
+
+.checkoutHeader {
   font-family: Archivo;
   font-weight: 900;
   letter-spacing: 3px;
 
-} 
-.count{
+}
+
+.count {
   letter-spacing: 10px;
 
 }
-.promoCode{
+
+.promoCode {
   height: 45px;
   width: 250px;
   border: 2px solid black;
 }
-.promoButton{
+
+.promoButton {
   height: 45px;
   width: 120px;
   color: white;
-background-color: black;
-text-align: center;
-padding-top: 7px;
-letter-spacing: 1.3px;
+  background-color: black;
+  text-align: center;
+  padding-top: 7px;
+  letter-spacing: 1.3px;
 
 }
-.promoCode_Header{
+
+.promoCode_Header {
   text-align: justify;
 }
 
-.promo{
+.promo {
   margin-left: 80px;
 }
-.final_checkout_Header{
+
+.final_checkout_Header {
   font-family: Archivo;
   font-weight: 900;
   font-size: 18px;
 }
-.checkout_Line{
+
+.checkout_Line {
   border: 1px solid black;
   border-radius: 2px;
   width: 100%;
@@ -837,13 +846,77 @@ letter-spacing: 1.3px;
   margin-top: 15px;
   margin-bottom: 13px;
 }
-.proceed_checkOut{
+
+.proceed_checkOut {
   height: 45px;
   background-color: black;
   margin-top: 40px;
   color: white;
   padding-top: 10px;
 }
-.checkOne{
+
+.checkOne {
   margin-top: 120px;
+}
+
+.checkoutTwo_Text {
+  margin-top: 70px;
+  font-weight: 900;
+  font-family: Archivo;
+}
+
+.shipping_Header {
+  margin-top: 30px;
+  font-weight: 900;
+  font-family: Archivo;
+
+
+}
+
+.shipping_subHeader {
+  margin-top: 80px;
+  font-family: Archivo;
+  font-size: 25px;
+  font-weight: 900;
+
+}
+
+.shipping_Header_text {
+  font-family: Archivo;
+  font-weight: 500;
+  margin-top: 40px;
+
+}
+
+.checkOutEmail {
+  width: 600px;
+  height: 50px;
+  background-color: aqua;
+  border: 1px solid black;
+}
+.email_Input{
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.email_Input_bar{
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 40px;
+  width: 440px;
+
+}
+.button_email{
+  height: 40px;
+  width: 440px;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  color: white;
+  padding-top: 7px;
+}
+.signUpIcon{
+  width: 30px;
 }
