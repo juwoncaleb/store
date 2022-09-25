@@ -8,11 +8,11 @@
     "start": "next start",
     "lint": "next lint"
   },
-  
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "autoprefixer": "^10.4.8",
     "flickity": "^3.0.0",
+    "mongoose": "^6.6.1",
     "next": "12.2.5",
     "next-auth": "^4.10.3",
     "postcss": "^8.4.16",
