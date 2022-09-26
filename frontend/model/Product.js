@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose"
 
-const clothesSchema = new Schema({
+const productSchema = new Schema({
   categories: {
     type: String
   },
@@ -51,7 +51,5 @@ const clothesSchema = new Schema({
   { timestamps: true }
 
 );
-const collectionName = 'clothes'
-const Clothes = model('Clothes', clothesSchema, collectionName);
+export default mongoose.models.Product || mongoose.model('Product', productSchema)
 
-export default Clothes 

@@ -9,17 +9,17 @@ function addProduct() {
     const [quantity, setQuantity] = useState('')
     console.log(name, category);
 
-    let newItem = [
+    let capturedItem = [
         name, category, subcategory, price, quantity, desctiption
     ]
 
-
+    console.log(capturedItem);
 
     const submitComment = async () => {
         // this is to find where we want to post int
-        const response = await fetch('/api/Clothes', {
+        await fetch('/api/Clothes', {
             method: 'POST',
-            body: JSON.stringify({ newItem }),
+            body: JSON.stringify({ capturedItem }),
             headers: {
                 'content-type': 'application/json',
             },
