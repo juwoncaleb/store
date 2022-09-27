@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
-import Footer from "./components/Footer";
-import Header from "./components/header";
+import Footer from "../component/Footer";
+import Header from "../component/Header";
 export default function LandingPage() {
 
   return (
