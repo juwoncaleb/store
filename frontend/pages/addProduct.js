@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
 function addProduct() {
+
+    const Form = ({})
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
     const [subcategory, setSubcategory] = useState('')
