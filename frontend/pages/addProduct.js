@@ -1,31 +1,34 @@
+import { log } from 'metro-core/src/Logger'
 import React, { useState } from 'react'
 
 function addProduct() {
 
-    const Form = ({})
+
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
     const [subcategory, setSubcategory] = useState('')
     const [price, setPrice] = useState('')
     const [desctiption, setDesctiption] = useState('')
     const [quantity, setQuantity] = useState('')
-    console.log(name, category);
 
-    let capturedItem = [
-        name, category, subcategory, price, quantity, desctiption
-    ]
+    
 
-    console.log(capturedItem);
 
     const submitComment = async () => {
         // this is to find where we want to post int
-        await fetch('/api/Clothes', {
+        await fetch('/api/Product', {
             method: 'POST',
-            body: JSON.stringify({ capturedItem }),
             headers: {
                 'content-type': 'application/json',
             },
+            body: JSON.stringify({ 
+                name: name,
+                categories: category
+             }),
+
         })
+       let data = await res.json()
+       console.log(data);
 
     }
     console.log(desctiption);
