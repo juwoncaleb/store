@@ -14,11 +14,14 @@ function addProduct() {
 
     const [files, setFiles] = useState([])
     const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
-        // Do something with the files
+
+        setFiles(acceptedFiles, rejectedFiles)
     }, [])
+    console.log(files);
+
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
-
+    console.log(getRootProps(), getInputProps());
     const submitComment = async () => {
         // this is to find where we want to post int
         await fetch('/api/Product', {
@@ -62,16 +65,14 @@ function addProduct() {
 
                 {/* UPLOAD IMAGES */}
                 <div className='flex mb-20 justify-around'>
-                    <div>
-                        <div className='uploadImage' {...getRootProps}>
-                            <img className='mt-40 ml-auto mr-auto iageIcon' src="https://img.icons8.com/dotty/80/000000/image--v1.png" />
-                            <p className='mt-4'>Drag images here or upload from your computer</p>
-                            <input {...getInputProps} />
-                            <div onClick={onDrop}>
-                                <p>test</p>
-                            </div>
-                        </div>
+
+                    <div className='uploadImage' {...getRootProps()}>
+                        <img className='mt-40 ml-auto mr-auto iageIcon' src="https://img.icons8.com/dotty/80/000000/image--v1.png" />
+                        <p className='mt-4'>Drag images here or upload from your computer</p>
+                        <input {...getInputProps()} />
+                        {JSON.stringify(files)}
                     </div>
+
 
 
                     <div className='sendDb'>
