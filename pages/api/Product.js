@@ -15,4 +15,6 @@ const newItem = await Product.create(req.body)
 res.status(200).json({newItem})
 console.log("sent to the database");
 
+
+
 }

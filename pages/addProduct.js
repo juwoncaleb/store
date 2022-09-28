@@ -1,9 +1,9 @@
-import { log } from 'metro-core/src/Logger'
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
+import { useDropzone } from 'react-dropzone';
 
 function addProduct() {
 
-
+    // This is to handle the state of the input
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
     const [subcategory, setSubcategory] = useState('')
@@ -11,8 +11,13 @@ function addProduct() {
     const [desctiption, setDesctiption] = useState('')
     const [quantity, setQuantity] = useState('')
 
-    
 
+    const [files, setFiles] = useState([])
+    const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
+        // Do something with the files
+    }, [])
+
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
     const submitComment = async () => {
         // this is to find where we want to post int
@@ -21,19 +26,18 @@ function addProduct() {
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify({ 
+            body: JSON.stringify({
                 name: name,
                 categories: category
-             }),
+            }),
 
         })
-       let data = await res.json()
-       console.log(data);
+        let data = await res.json()
+        console.log(data);
 
     }
-    console.log(desctiption);
     return (
-        <div className='addproduct'>
+        <div className='addproduct'  >
             <div className='flex justify-between productTabOne pt-10'>
                 <input type='text' className="searchItem ml-10" placeholder='Search' />
 
@@ -56,20 +60,16 @@ function addProduct() {
                 <p className='text-start mb-20 mt-10  addproductText text-4xl'>Add Product</p>
 
 
-
+                {/* UPLOAD IMAGES */}
                 <div className='flex mb-20 justify-around'>
-                    {/* UPLOAD IMAGES */}
                     <div>
-                        <div className='uploadImage'>
+                        <div className='uploadImage' {...getRootProps}>
                             <img className='mt-40 ml-auto mr-auto iageIcon' src="https://img.icons8.com/dotty/80/000000/image--v1.png" />
                             <p className='mt-4'>Drag images here or upload from your computer</p>
-                        </div>
-
-
-
-                        <div>
-
-                            <p>Cancel</p>
+                            <input {...getInputProps} />
+                            <div onClick={onDrop}>
+                                <p>test</p>
+                            </div>
                         </div>
                     </div>
 

@@ -4,8 +4,8 @@ import React, { useEffect, useState, useMemo } from "react";
 // import axios from "axios";
 
 import { useRouter } from 'next/router'
-import Header from "./components/header";
-import Footer from "./components/Footer";
+import Footer from "../component/Footer";
+import Header from "../component/Header";
 
 // AUTHENTICATION
 import {useSession , signIn, signOut} from "next-auth/react"
