@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone';
 
 function addProduct() {
@@ -11,17 +11,31 @@ function addProduct() {
     const [desctiption, setDesctiption] = useState('')
     const [quantity, setQuantity] = useState('')
 
-
+    // this is used for the dragand drop feature
     const [files, setFiles] = useState([])
     const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
 
-        setFiles(acceptedFiles, rejectedFiles)
+        acceptedFiles.forEach((file) => {
+            const reader = new FileReader()
+            reader.onload = () => {
+                setFiles(prevState => [...prevState, reader.result])
+            }
+            reader.readAsDataURL(file)
+        })
     }, [])
-    console.log(files);
 
+    useEffect(() => {
+        console.log(files);
+    }, [files])
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
-    console.log(getRootProps(), getInputProps());
+
+    // this is used to upload data to cloudinary server
+
+
+
+
+    // this is used to send data to the database
     const submitComment = async () => {
         // this is to find where we want to post int
         await fetch('/api/Product', {
@@ -36,7 +50,6 @@ function addProduct() {
 
         })
         let data = await res.json()
-        console.log(data);
 
     }
     return (
@@ -66,13 +79,18 @@ function addProduct() {
                 {/* UPLOAD IMAGES */}
                 <div className='flex mb-20 justify-around'>
 
-                    <div className='uploadImage' {...getRootProps()}>
-                        <img className='mt-40 ml-auto mr-auto iageIcon' src="https://img.icons8.com/dotty/80/000000/image--v1.png" />
-                        <p className='mt-4'>Drag images here or upload from your computer</p>
-                        <input {...getInputProps()} />
-                        {JSON.stringify(files)}
-                    </div>
+                    <div>
+                        <div className='uploadImage' {...getRootProps()}>
+                            <img className='mt-40 ml-auto mr-auto iageIcon' src="https://img.icons8.com/dotty/80/000000/image--v1.png" />
+                            <p className='mt-4'>Drag images here or upload from your computer</p>
+                            <input {...getInputProps()} />
 
+                        </div>
+                        {files.length > 0 && <div>
+
+                        </div>
+                        }
+                    </div>
 
 
                     <div className='sendDb'>
