@@ -30,11 +30,12 @@ function addProduct() {
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
-    // this is used to upload data to cloudinary server
+   // this is used to get the AWS url
+   const url = async ()=>{
+    await fetch('/api/uploadCloud').then(res=>res.json());
 
-
-
-
+   }
+   console.log(url);
     // this is used to send data to the database
     const submitComment = async () => {
         // this is to find where we want to post int
@@ -87,8 +88,10 @@ function addProduct() {
 
                         </div>
                         {files.length > 0 && <div>
-
-                        </div>
+                            {
+                                files.map((file, index) => <img src={file} key={index} />)
+                            }
+                            \                        </div>
                         }
                     </div>
 

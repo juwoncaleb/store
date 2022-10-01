@@ -11,8 +11,12 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "autoprefixer": "^10.4.8",
+    "aws-sdk": "^2.1227.0",
+    "axios": "^0.27.2",
     "cloudinary": "^1.32.0",
     "cloudinary-react": "^1.8.1",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
     "flickity": "^3.0.0",
     "mongoose": "^6.6.1",
     "next": "12.2.5",
@@ -24,6 +28,7 @@
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",
     "swiper": "^8.3.2",
+    "util-promisify": "^3.0.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
