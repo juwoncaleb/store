@@ -1,10 +1,12 @@
 import aws from 'aws-sdk';
+import dotenv from 'dotenv'
+dotenv.config()
  // Using AWS s3 bucket Details
- const region = 'eu-west-2'
- const bucketName = 'juwoncaleb'
+ const region = 'us-west-2'
+ const bucketName = ''
  const accessKeyId = process.env.AWS_ACCESS_KEY_ID
  const secretAccessKey = process.env.AWS_SECRET_KEY
- console.log(secretAccessKey);
+
  // this initializes the s3 bucket
  const s3 = new aws.S3({
      region,

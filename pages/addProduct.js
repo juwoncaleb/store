@@ -27,15 +27,13 @@ function addProduct() {
     useEffect(() => {
         console.log(files);
     }, [files])
-
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
-   // this is used to get the AWS url
-   const url = async ()=>{
-    await fetch('/api/uploadCloud').then(res=>res.json());
-
+    // this is used to get the AWS url
+   
+   const getUrl = async () =>{
+    await fetch('/api/uploadCloud').then(res => res.json())
    }
-   console.log(url);
     // this is used to send data to the database
     const submitComment = async () => {
         // this is to find where we want to post int
@@ -91,9 +89,11 @@ function addProduct() {
                             {
                                 files.map((file, index) => <img src={file} key={index} />)
                             }
-                            \                        </div>
+                        </div>
                         }
                     </div>
+                    <p onClick={getUrl}>UPLOAD</p>
+
 
 
                     <div className='sendDb'>
@@ -121,3 +121,5 @@ function addProduct() {
 }
 
 export default addProduct
+
+
