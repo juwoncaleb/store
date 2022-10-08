@@ -1,7 +1,12 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone';
 
+
+// import { storage } from '../utils/firebase'
+// import { ref, uploadBytes } from 'firebase/storage'
 function addProduct() {
+
+
 
     // This is to handle the state of the input
     const [name, setName] = useState('')
@@ -10,31 +15,46 @@ function addProduct() {
     const [price, setPrice] = useState('')
     const [desctiption, setDesctiption] = useState('')
     const [quantity, setQuantity] = useState('')
-
     // this is used for the dragand drop feature
     const [files, setFiles] = useState([])
-    const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
-
-        acceptedFiles.forEach((file) => {
-            const reader = new FileReader()
-            reader.onload = () => {
-                setFiles(prevState => [...prevState, reader.result])
-            }
-            reader.readAsDataURL(file)
-        })
-    }, [])
-
     useEffect(() => {
         console.log(files);
     }, [files])
+
+    const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
+
+        acceptedFiles.forEach((file) => {
+            setFiles(prevState => [...prevState, file])
+
+        })
+    }, [])
+
+
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
-    // this is used to get the AWS url
-   
-   const getUrl = async () =>{
-    await fetch('/api/uploadCloud').then(res => res.json())
-   }
-    // this is used to send data to the database
+    // FETCHING THE URL FROM THE S3 BUCKET
+    const fetchCUrl = async () => {
+        const data = await fetch(`./api/uploadCloud`)
+        // Converting to string
+        var newUrl = await data.json()
+        var newUrl = Object.values(newUrl)
+        var newUrl = newUrl.toString()
+        console.log(newUrl);
+        // this puts the image in the s3 bucket
+        await fetch(newUrl, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            body: files
+        })
+        console.log(newUrl);
+
+        let imageUrl = newUrl.split('?')[0]
+        console.log(imageUrl);
+
+    }
+
     const submitComment = async () => {
         // this is to find where we want to post int
         await fetch('/api/Product', {
@@ -92,7 +112,7 @@ function addProduct() {
                         </div>
                         }
                     </div>
-                    <p onClick={getUrl}>UPLOAD</p>
+                    <p onClick={fetchCUrl}>UPLOAD</p>
 
 
 
