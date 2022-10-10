@@ -1,7 +1,5 @@
 import aws from 'aws-sdk';
-import crypto from 'crypto';
-import { promisify } from 'util';
-const randomBytes = promisify(crypto.randomBytes)
+
 
 // Using AWS s3 bucket Details
 const region = "us-west-2";
@@ -18,8 +16,7 @@ const s3 = new aws.S3({
 })
 // Aws URL
 export async function generateUploadUrl() {
-    let rawByte =  randomBytes(16)
-    const imageName =  rawByte.toString('hex')
+    const imageName =  "r"
 
     const params = ({ 
         Bucket,

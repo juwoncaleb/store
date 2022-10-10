@@ -54,7 +54,7 @@ function addProduct() {
         console.log(imageUrl);
 
     }
-
+   
     const submitComment = async () => {
         // this is to find where we want to post int
         await fetch('/api/Product', {
@@ -113,7 +113,6 @@ function addProduct() {
                         }
                     </div>
                     <p onClick={fetchCUrl}>UPLOAD</p>
-
 
 
                     <div className='sendDb'>
