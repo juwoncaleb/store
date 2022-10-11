@@ -16,11 +16,13 @@ const s3 = new aws.S3({
 })
 // Aws URL
 export async function generateUploadUrl() {
-    const imageName =  "r"
+    // randomize the name of the file once uploaded
+    const result = Math.random().toString(36).substring(2, 7);
 
-    const params = ({ 
+
+    const params = ({
         Bucket,
-        Key: imageName,
+        Key: result,
         Expires: 60
     })
     const uploadUrl = await s3.getSignedUrlPromise('putObject', params)

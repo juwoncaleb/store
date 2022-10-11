@@ -39,7 +39,6 @@ function addProduct() {
         var newUrl = await data.json()
         var newUrl = Object.values(newUrl)
         var newUrl = newUrl.toString()
-        console.log(newUrl);
         // this puts the image in the s3 bucket
         await fetch(newUrl, {
             method: "PUT",
@@ -54,6 +53,7 @@ function addProduct() {
         console.log(imageUrl);
 
     }
+    
    
     const submitComment = async () => {
         // this is to find where we want to post int
