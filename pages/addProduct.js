@@ -1,38 +1,35 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone';
-
-
-// import { storage } from '../utils/firebase'
-// import { ref, uploadBytes } from 'firebase/storage'
 function addProduct() {
 
-
-
-    // This is to handle the state of the input
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
     const [subcategory, setSubcategory] = useState('')
     const [price, setPrice] = useState('')
     const [desctiption, setDesctiption] = useState('')
     const [quantity, setQuantity] = useState('')
-    // this is used for the dragand drop feature
+    const [images, setImages] = useState('')
     const [files, setFiles] = useState([])
+
     useEffect(() => {
         console.log(files);
+        console.log();
     }, [files])
 
     const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
-
         acceptedFiles.forEach((file) => {
-            setFiles(prevState => [...prevState, file])
-
+            const reader = new FileReader()
+            reader.onload = () => {
+                setFiles(prevState => [...prevState, reader.result])
+            }
+            reader.readAsDataURL(file)
         })
     }, [])
-
-
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
+        // FETCHING THE URL FROM THE S3 BUCKET
 
-    // FETCHING THE URL FROM THE S3 BUCKET
+    
+    let imageUrl
     const fetchCUrl = async () => {
         const data = await fetch(`./api/uploadCloud`)
         // Converting to string
@@ -49,12 +46,10 @@ function addProduct() {
         })
         console.log(newUrl);
 
-        let imageUrl = newUrl.split('?')[0]
+        imageUrl = newUrl.split('?')[0]
         console.log(imageUrl);
 
     }
-    
-   
     const submitComment = async () => {
         // this is to find where we want to post int
         await fetch('/api/Product', {
@@ -106,14 +101,13 @@ function addProduct() {
 
                         </div>
                         {files.length > 0 && <div>
-                            {
-                                files.map((file, index) => <img src={file} key={index} />)
-                            }
+                            {files.map((file, index) => <img src={file} key={index} />)}
                         </div>
+
                         }
                     </div>
+                    <img src="https://storeecom.s3.us-west-2.amazonaws.com/prscv" />
                     <p onClick={fetchCUrl}>UPLOAD</p>
-
 
                     <div className='sendDb'>
                         <form action="/action.php">
@@ -122,6 +116,9 @@ function addProduct() {
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Subcategory" value={subcategory} onChange={(e) => setSubcategory(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
+
+                            <input className='fillOrder mt-10' type="text" id="fname" placeholder="Quantity" value={imageUrl} onChange={(e) => setImages(e.target.value)} disabled />
+
                             <br />
                             <input className='fillOrder mt-10' type="text" id="lname" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
                             <textarea className='fillOrder mt-10' id="txtid" name="txtname" rows="8" cols="100" maxlength="200" placeholder='Description' value={desctiption} onChange={(e) => { setDesctiption(e.target.value) }} >
