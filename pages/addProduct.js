@@ -10,7 +10,7 @@ function addProduct() {
     const [quantity, setQuantity] = useState('')
     const [images, setImages] = useState('')
     const [files, setFiles] = useState([])
-
+    console.log(images);
     useEffect(() => {
         console.log(files);
         console.log();
@@ -26,30 +26,9 @@ function addProduct() {
         })
     }, [])
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
-        // FETCHING THE URL FROM THE S3 BUCKET
+
 
     
-    let imageUrl
-    const fetchCUrl = async () => {
-        const data = await fetch(`./api/uploadCloud`)
-        // Converting to string
-        var newUrl = await data.json()
-        var newUrl = Object.values(newUrl)
-        var newUrl = newUrl.toString()
-        // this puts the image in the s3 bucket
-        await fetch(newUrl, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "multipart/form-data"
-            },
-            body: files
-        })
-        console.log(newUrl);
-
-        imageUrl = newUrl.split('?')[0]
-        console.log(imageUrl);
-
-    }
     const submitComment = async () => {
         // this is to find where we want to post int
         await fetch('/api/Product', {
@@ -106,8 +85,7 @@ function addProduct() {
 
                         }
                     </div>
-                    <img src="https://storeecom.s3.us-west-2.amazonaws.com/prscv" />
-                    <p onClick={fetchCUrl}>UPLOAD</p>
+                    <p>UPLOAD</p>
 
                     <div className='sendDb'>
                         <form action="/action.php">
@@ -117,7 +95,6 @@ function addProduct() {
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Subcategory" value={subcategory} onChange={(e) => setSubcategory(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
 
-                            <input className='fillOrder mt-10' type="text" id="fname" placeholder="Quantity" value={imageUrl} onChange={(e) => setImages(e.target.value)} disabled />
 
                             <br />
                             <input className='fillOrder mt-10' type="text" id="lname" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
@@ -135,7 +112,5 @@ function addProduct() {
         </div>
     )
 }
-
-export default addProduct
 
 

@@ -4,7 +4,7 @@ const productSchema = new Schema({
   categories: {
     type: String
   },
-  subCatergory: {
+  subCategory: {
     type: String
   },
   name: {
@@ -24,30 +24,12 @@ const productSchema = new Schema({
   quantity: {
     type: Number,
   },
-  categories: {
-    type: String
-  },
-  size:
-    [
-      {
-        XXL: Boolean
-      },
-      {
-        XL: Boolean
-      },
-      {
-        L: Boolean
-      },
-      {
-        M: Boolean
-      }, {
-        S: Boolean
-      }
-    ]
+
+
 
 },
-  { timestamps: true }
+{ timestamps: true }
 
 )
-const Product = models.Product ||  model('Product', productSchema) 
+const Product = models.Product || model('Product', productSchema)
 export default Product

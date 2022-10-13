@@ -1,8 +1,24 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import axios from 'axios'
+import { useState } from 'react'
 
-function product() {
+function product({ allProducts }) {
+    // a state that handles the display of the product in the ui
+    // const [productList, setProductList] = useState(allProducts)
     const router = useRouter()
+    console.log(allProducts);
+
+    // This handle the deletion of an item from the UI AND DATABASE
+    const handleDelete = async (id) => {
+        try {
+            const res = await axios.delete('/api/product' + id)
+            setProductList(productData.filter((productItem) => productItem._id !== id))
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 
     return (
 
@@ -48,45 +64,39 @@ function product() {
                     </select>
                 </div>
 
-                <div onClick={() => router.push('/addProduct')} className='flex cursor-pointer justify-center pt-2 pb-2 mr-4 addProduct'>
-                    <img className='addIcon mr-2' src="https://img.icons8.com/ios/50/000000/add--v1.png" /> 
-                      Add Product
-                </div>
+
             </div>
             <div className='bg-white ml-4 mr-4'>
                 <div className='flex justify-start ml-10 mt-6'>
-                    <p className='text-center'>PRODUCT</p>
+                    <p className='text-center'>ORDER</p>
 
                 </div>
 
                 <div className='flex justify-around productHeader mt-4 pt-2'>
-                    <p>Product</p>
-                    <p>Category</p>
-                    <p>Price</p>
-                    <p>Stock</p>
-                    <p>Sold</p>
-                    <p>Revenue</p>
+                    <p>ID</p>
+                    <p>Customer</p>
+                    <p>Total</p>
+                    <p>Payment</p>
+                    <p>Status</p>
                     <p>Actions</p>
                 </div>
+                {
+                    allProducts.map((productItem) => (
+                        <div className='flex justify-around productHeader mt-4 pt-2' key={productItem._id}>
+                            <p>{productItem._id}</p>
+                            <p>{productItem._id}</p>
+                            <p>{productItem._id}</p>
+                            <p>{productItem._id}</p>
+                            <p>{productItem._id}</p>
+                            <div>
+                                <button></button>
+                            </div>
+                        </div>
 
-                <div className='flex justify-around  mt-10'>
-                    <p>Product</p>
-                    <p>Category</p>
-                    <p>Price</p>
-                    <p>Stock</p>
-                    <p>Sold</p>
-                    <p>Revenue</p>
-                    <p>Actions</p>
-                </div>
-                <div className='flex justify-around  mt-10'>
-                    <p>Product</p>
-                    <p>Category</p>
-                    <p>Price</p>
-                    <p>Stock</p>
-                    <p>Sold</p>
-                    <p>Revenue</p>
-                    <p>Actions</p>
-                </div>
+
+                    ))
+                }
+
 
                 <div className='flex justify-between mt-10 ml-10 mr-10'>
                     <select className='profileView'>
@@ -105,15 +115,13 @@ function product() {
 
 export default product
 
-export async function getStaticProps() {
-    // this is used to fecth the data from the api end point
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    // this is used to convert the api we got into json
-    const data = await response.json()
-    //after fetching we shoild return 
+export async function getServerSideProps() {
+    const prodRes = await fetch("http://localhost:3000/api/products")
+    const data = await prodRes.json()
+    console.log(data);
     return {
         props: {
-            users: data
+            allProducts: data
         }
     }
 }
