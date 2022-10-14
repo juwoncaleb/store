@@ -1,8 +1,32 @@
-import axios from 'axios'
 import React from 'react'
+import { useRouter } from 'next/router'
+import axios from 'axios'
+import { useState } from 'react'
 
-function order({orderData}) {
+function order({ allOrder }) {
+    // a state that handles the display of the product in the ui
+    const [orderList, setOrderList] = useState(allOrder)
+    const router = useRouter()
+    
+
+    // This handle the deletion of an item from the UI AND DATABASE
+    const handleDelete = async (id) => {
+        try {
+            const res = await axios.delete("/api/orders/" + id)
+            // this handles the delete in the UI
+            setOrderList(orderList.filter((orderItem) => orderItem._id !== id))
+
+            
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+
+
     return (
+
         <div className='productAdmin'>
             <div className='flex justify-between productTabOne pt-10'>
                 <input type='text' className="searchItem ml-10" placeholder='Search' />
@@ -45,45 +69,40 @@ function order({orderData}) {
                     </select>
                 </div>
 
-                <div onClick={() => router.push('/addProduct')} className='flex cursor-pointer justify-center pt-2 pb-2 mr-4 addProduct'>
-                    <img className='addIcon mr-2' src="https://img.icons8.com/ios/50/000000/add--v1.png" />
-                    Add Product
-                </div>
+
             </div>
             <div className='bg-white ml-4 mr-4'>
                 <div className='flex justify-start ml-10 mt-6'>
-                    <p className='text-center'>PRODUCT</p>
+                    <p className='text-center'>ORDER</p>
 
                 </div>
 
                 <div className='flex justify-around productHeader mt-4 pt-2'>
-                    <p>Product</p>
-                    <p>Category</p>
-                    <p>Price</p>
-                    <p>Stock</p>
-                    <p>Sold</p>
-                    <p>Revenue</p>
+                    <p>ID</p>
+                    <p>Customer</p>
+                    <p>Total</p>
+                    <p>Payment</p>
+                    <p>Status</p>
                     <p>Actions</p>
                 </div>
+                {
+                    allOrder.map((orderItem) => (
+                        <div className='flex justify-around productHeader mt-4 pt-2' key={orderItem._id}>
+                            <p>{orderItem._id}</p>
+                            <p>{orderItem._id}</p>
+                            <p>{orderItem._id}</p>
+                            <p>{orderItem._id}</p>
+                            <p>{orderItem._id}</p>
+                            <div className='flex  justify-around crud'>
+                                <img className='editIcon' src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-edit-mintab-for-ios-becris-lineal-becris.png" />
+                                <img onClick={()=> handleDelete(orderItem._id)} className='editIcon ' src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png" />
+                            </div>
+                        </div>
 
-                <div className='flex justify-around  mt-10'>
-                    <p>Product</p>
-                    <p>Category</p>
-                    <p>Price</p>
-                    <p>Stock</p>
-                    <p>Sold</p>
-                    <p>Revenue</p>
-                    <p>Actions</p>
-                </div>
-                <div className='flex justify-around  mt-10'>
-                    <p>Product</p>
-                    <p>Category</p>
-                    <p>Price</p>
-                    <p>Stock</p>
-                    <p>Sold</p>
-                    <p>Revenue</p>
-                    <p>Actions</p>
-                </div>
+
+                    ))
+                }
+
 
                 <div className='flex justify-between mt-10 ml-10 mr-10'>
                     <select className='profileView'>
@@ -103,13 +122,13 @@ function order({orderData}) {
 export default order
 
 export async function getServerSideProps() {
-    const orderResponse = await fetch('/api/order',)
+    const prodRes = await fetch("http://localhost:3000/api/products")
+    const data = await prodRes.json()
+    console.log(data);
     return {
         props: {
-            orderData : orderResponse.data
+            allOrder: data
         }
     }
 }
-
-
 

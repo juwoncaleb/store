@@ -4,20 +4,22 @@ import axios from 'axios'
 import { useState } from 'react'
 
 function product({ allProducts }) {
-    // a state that handles the display of the product in the ui
-    // const [productList, setProductList] = useState(allProducts)
-    const router = useRouter()
-    console.log(allProducts);
+   const router = useRouter()
+        // a state that handles the display of the product in the ui
+ const [productList, setProductList] = useState(allProducts)
 
     // This handle the deletion of an item from the UI AND DATABASE
     const handleDelete = async (id) => {
         try {
-            const res = await axios.delete('/api/product' + id)
-            setProductList(productData.filter((productItem) => productItem._id !== id))
+            const res = await axios.delete("/api/products/" + id)
+            // this handles the delete in the UI
+            productList.splice(id, 1)
         } catch (error) {
             console.log(error);
         }
     }
+
+
 
 
     return (
@@ -88,8 +90,9 @@ function product({ allProducts }) {
                             <p>{productItem._id}</p>
                             <p>{productItem._id}</p>
                             <p>{productItem._id}</p>
-                            <div>
-                                <button></button>
+                            <div className='flex  justify-around crud'>
+                                <img className='editIcon' src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-edit-mintab-for-ios-becris-lineal-becris.png" />
+                                <img onClick={()=> handleDelete(productItem._id)} className='editIcon ' src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png" />
                             </div>
                         </div>
 

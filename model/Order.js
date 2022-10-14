@@ -46,5 +46,5 @@ const orderSchema = new Schema({
         }
     ]
 })
-const order = model.order || model("order", orderSchema);
-export default order
+const Order = model.Order || model("Order", orderSchema);
+export default Order
