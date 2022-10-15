@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div>
       <div className="footer">
-        <div class="grid grid-cols-2 md:grid-cols-4  gap-4 loadIcon ">
+        <div class="grid grid-cols-4 md:grid-cols-4  gap-4 loadIcon ">
           <div>
             <img className="icon" src="return-product.png" />
           </div>
@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
         </div>
         <hr className="borderLine" />
-        <div class="grid grid-cols-2 md:grid-cols-4  gap-4  footerMenu">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-4  footerMenu">
           <div>
             <p className="footerMain">About Lacoste</p>
             <br />

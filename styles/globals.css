@@ -1115,3 +1115,10 @@ width: 50px;
 .crud{
   width: 70px;
 }
+.productImages{
+  width: 270px;
+  height: 270px;
+}
+.productSection{
+  width: 100%;
+}
