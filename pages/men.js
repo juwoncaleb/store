@@ -141,26 +141,3 @@ const {data:session} = useSession()
   );
 }
 
-
-// export const getServerSideProps = async () => {
-//   try {
-//     console.log("connecting to the database");
-//     await dbConnect();
-//     console.log("Database connected Successfully");
-//     console.log("Now fetching data ");
-//     const newModels = await Product.find();
-//     console.log("document fetched");
-
-//     return {
-//       props: {
-//         newModels: JSON.parse(JSON.stringify(newModels)),
-//       },
-//     };
-//   } catch (error) {
-//     console.log(error);
-
-//     return {
-//       notFound: true,
-//     };
-//   }
-// };

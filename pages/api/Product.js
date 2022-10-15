@@ -12,7 +12,7 @@ export default async function productSchema(req, res) {
 
 const newItem = await Product.create(req.body)
    
-res.status(200).json({newItem})
+res.status(200)
 console.log("sent to the database");
 
 

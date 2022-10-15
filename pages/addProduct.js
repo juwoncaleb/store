@@ -1,12 +1,13 @@
+import axios from 'axios';
 import React, { useState, useCallback, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone';
-function addProduct() {
+export default function addProduct() {
 
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
-    const [subcategory, setSubcategory] = useState('')
+    const [subCategory, setSubcategory] = useState('')
     const [price, setPrice] = useState('')
-    const [desctiption, setDesctiption] = useState('')
+    const [description, setdescription] = useState('')
     const [quantity, setQuantity] = useState('')
     const [images, setImages] = useState('')
     const [files, setFiles] = useState([])
@@ -15,6 +16,7 @@ function addProduct() {
         console.log(files);
         console.log();
     }, [files])
+
 
     const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
         acceptedFiles.forEach((file) => {
@@ -28,7 +30,7 @@ function addProduct() {
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
 
-    
+
     const submitComment = async () => {
         // this is to find where we want to post int
         await fetch('/api/Product', {
@@ -37,14 +39,38 @@ function addProduct() {
                 'content-type': 'application/json',
             },
             body: JSON.stringify({
-                name: name,
-                categories: category
+                name,
+                category,
+                subCategory,
+                description,
+                quantity,
+                price,
+                images,
             }),
-
         })
+
         let data = await res.json()
+        console.log(data);
 
     }
+
+    const refreshPage = () => {
+        window.location.reload();
+    }
+    const uploadImages = async () => {
+        const data = new FormData()
+        data.append('file', files)
+        data.append("upload_preset", "uploads")
+        const upload = await axios.post("https://api.cloudinary.com/v1_1/ddjlsw268/image/upload", data)
+        const { url } = upload.data
+        let newUrl = url
+        setImages(newUrl)
+        alert("Upload");
+    }
+
+
+
+
     return (
         <div className='addproduct'  >
             <div className='flex justify-between productTabOne pt-10'>
@@ -79,30 +105,37 @@ function addProduct() {
                             <input {...getInputProps()} />
 
                         </div>
+
                         {files.length > 0 && <div>
-                            {files.map((file, index) => <img src={file} key={index} />)}
+                            {files.map((file, index) =>
+                                <div>
+                                    <img src={file} key={index} />
+                                    <p onClick={uploadImages}>UPLOAD</p>
+
+                                </div>
+                            )
+                            }
                         </div>
 
                         }
                     </div>
-                    <p>UPLOAD</p>
 
                     <div className='sendDb'>
                         <form action="/action.php">
                             <label for="fname mb-1">Name</label>
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Moncler , Gucci" value={name} onChange={(e) => setName(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
-                            <input className='fillOrder mt-10' type="text" id="fname" placeholder="Subcategory" value={subcategory} onChange={(e) => setSubcategory(e.target.value)} />
+                            <input className='fillOrder mt-10' type="text" id="fname" placeholder="Subcategory" value={subCategory} onChange={(e) => setSubcategory(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
 
 
                             <br />
                             <input className='fillOrder mt-10' type="text" id="lname" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
-                            <textarea className='fillOrder mt-10' id="txtid" name="txtname" rows="8" cols="100" maxlength="200" placeholder='Description' value={desctiption} onChange={(e) => { setDesctiption(e.target.value) }} >
+                            <textarea className='fillOrder mt-10' id="txtid" name="txtname" rows="8" cols="100" maxlength="200" placeholder='Description' value={description} onChange={(e) => { setdescription(e.target.value) }} >
 
                             </textarea>
                             <br />
-                            <div onClick={submitComment} className='Submitt pl-auto pr-auto mt-4'>
+                            <div onClick={() => { submitComment(); refreshPage(); }} className='Submitt pl-auto pr-auto mt-4 cursor-pointer'>
                                 <p className='mt-1'>Send to Database</p>
                             </div>
                         </form>

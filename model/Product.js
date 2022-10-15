@@ -1,10 +1,13 @@
 import { Schema, model, models } from "mongoose"
 
 const productSchema = new Schema({
-  categories: {
+  category: {
     type: String
   },
   subCategory: {
+    type: String
+  },
+  description: {
     type: String
   },
   name: {
@@ -16,9 +19,9 @@ const productSchema = new Schema({
     type: Number,
     maxlength: 60,
   },
-  img: {
+  images: {
     type: String,
-    maxlength: 60,
+    maxlength: 200
   },
 
   quantity: {
@@ -28,8 +31,9 @@ const productSchema = new Schema({
 
 
 },
-{ timestamps: true }
+  { timestamps: true }
 
 )
 const Product = models.Product || model('Product', productSchema)
 export default Product
+
