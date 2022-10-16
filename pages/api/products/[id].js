@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
     if (method === 'GET') {
         try {
-            const productsItem = await Product.findById()
+            const productsItem = await Product.findById(id)
             res.status(200).json(productsItem)
         } catch (error) {
             res.status(500).json(error)

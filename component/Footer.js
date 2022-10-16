@@ -97,7 +97,7 @@ export default function Footer() {
           <div className="payment">
             <div className="pay  ">
               <p>PAYMENT OPTION</p>
-              <div className="flex justify-center mt-6">
+              <div className="flex justify-around mt-6">
                 <img
                   className="lastIcon relative right-16"
                   src="https://img.icons8.com/stickers/100/000000/visa.png"

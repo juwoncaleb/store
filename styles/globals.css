@@ -1122,3 +1122,23 @@ width: 50px;
 .productSection{
   width: 100%;
 }
+.description{
+  width: 50%;
+}
+.description_line{
+  border: black 1px solid;
+}
+.bag{
+  height: 70px;
+}
+.bagText{
+  position: relative;
+  top: 14px;
+  font-size: 20px;
+}
+.laundry{
+  height: 30px;
+}
+.desc{
+  text-align: start;
+}
