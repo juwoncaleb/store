@@ -1,7 +1,5 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import Header from './components/header'
-
 export default function signUp() {
     const router = useRouter()
 
