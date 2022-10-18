@@ -1,7 +1,11 @@
 import React from 'react'
-import Header from "./components/header";
-import Footer from "./components/Footer";
+import Footer from '../component/Footer'
+import Header from '../component/Header'
+import { useRouter } from 'next/router'
+
 export default function checkoutOne() {
+  const router = useRouter()
+
   return (
     <div>
       <Header />
@@ -104,13 +108,13 @@ export default function checkoutOne() {
             <p>VAT</p>
             $ 13
           </div>
-          <hr  className='checkout_Line'/>
+          <hr className='checkout_Line' />
           <div className='flex justify-between smallerText font-semibold mt-4'>
             <p>TOTAL</p>
             <p>$350</p>
           </div>
 
-          <div className='proceed_checkOut'>
+          <div onClick={() => router.push('/checkoutTwo')} className='proceed_checkOut'>
             <p>Proceed to checkout</p>
           </div>
         </div>

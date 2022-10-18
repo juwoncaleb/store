@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from "./components/header";
-import Footer from "./components/Footer";
+import Footer from '../component/Footer'
+import Header from '../component/Header'
+import { useRouter } from 'next/router'
 export default function checkoutTwo() {
   return (
     <div>

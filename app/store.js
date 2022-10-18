@@ -1,8 +1,8 @@
 import { configureStore} from "@reduxjs/toolkit";
-import cakeReducer from "../features/cake/cakeSlice"
+import userSlice from "../redux/userSlice"
 
-const store = configureStore({
+export default configureStore({
     reducer:{
-        cake: cakeReducer  
+       user: userSlice
     }
 })

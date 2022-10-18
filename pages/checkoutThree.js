@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from "./components/header";
-import Footer from "./components/Footer";
+import Footer from '../component/Footer'
+import Header from '../component/Header'
 export default function checkoutThree() {
   return (
     <div>
