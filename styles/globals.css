@@ -1142,3 +1142,8 @@ width: 50px;
 .desc{
   text-align: start;
 }
+.cartItem{
+  position: relative;
+  left: 33px;
+  top: 27px;
+}

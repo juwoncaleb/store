@@ -2,10 +2,13 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 export default function testing() {
-    const nameOfperson = useSelector(state => state.user.name)
+    const user = useSelector((state) => state.user)
     return (
         <div>
-            <p>{nameOfperson}</p>
+            <p>{user.name}</p>
+            <p>{user.email}</p>
+
         </div>
     )
 }
+ 
