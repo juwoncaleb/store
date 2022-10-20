@@ -4,13 +4,14 @@ import Footer from '../../component/Footer'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
 export default function item({ productItem }) {
-    const dispatch = useDispatch
+    const dispatch = useDispatch()
     let price = productItem.price
-    console.log(price);
+    let quantity = productItem.quantity
+    console.log( `the price is $${price} and quantity is ${quantity}` );
 
 
     const addToCart = () => {
-        dispatch(addProduct({ ...productItem,  }))
+        dispatch(addProduct({ ...productItem, quantity, price }))
     }
 
 
