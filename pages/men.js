@@ -11,7 +11,6 @@ import Header from "../component/Header";
 import {useSession , signIn, signOut} from "next-auth/react"
 export default function men() {
   const router = useRouter()
-const {data:session} = useSession()
 
 
   return (

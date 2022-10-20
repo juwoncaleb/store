@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 function Header() {
   const router = useRouter()
   const orderQuantity = useSelector((state) => state.cart.quantity)
+  console.log(orderQuantity);
   return (
 
     <div className="">
@@ -38,8 +39,8 @@ function Header() {
             className="navIcon"
             src="https://img.icons8.com/ios/50/undefined/user--v3.png"
           />
-<p className="cartItem">   0       {orderQuantity}
-</p>
+          <p className="cartItem">      {orderQuantity}
+          </p>
           <img
             onClick={() => router.push('/auth')}
             className="navIcon"

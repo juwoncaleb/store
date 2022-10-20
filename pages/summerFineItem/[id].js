@@ -1,8 +1,19 @@
 import React from 'react'
 import Header from '../../component/Header'
 import Footer from '../../component/Footer'
-
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../redux/cartSlice'
 export default function item({ productItem }) {
+    const dispatch = useDispatch
+    let price = productItem.price
+    console.log(price);
+
+
+    const addToCart = () => {
+        dispatch(addProduct({ ...productItem,  }))
+    }
+
+
     return (
         <div>
             <Header />
@@ -23,7 +34,7 @@ export default function item({ productItem }) {
 
                 </div>
                 <div className='bg-black bag mt-10'>
-                    <p className='text-center text-white bagText '>Add to bag</p>
+                    <p onClick={addToCart} className='text-center text-white bagText '>Add to bag</p>
                 </div>
                 <hr className='description_line' />
                 <p className='text-left mt-6'>Description</p>
