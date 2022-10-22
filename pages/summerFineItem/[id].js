@@ -1,24 +1,30 @@
 import React from 'react'
 import Header from '../../component/Header'
 import Footer from '../../component/Footer'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
+import { useRouter } from 'next/router'
+
+
 export default function item({ productItem }) {
     const dispatch = useDispatch()
+    const router = useRouter()
+
     let price = productItem.price
     let quantity = productItem.quantity
-    console.log( `the price is $${price} and quantity is ${quantity}` );
+    console.log(`the price is $${price} and quantity is ${quantity}`);
 
 
     const addToCart = () => {
-        dispatch(addProduct({ ...productItem, quantity, price }))
+        dispatch(addProduct({ productItem, quantity, price }))
     }
 
-
+    const cart = useSelector((state) => state.cart.products)
+    console.log(cart);
     return (
         <div>
             <Header />
-            <p className=" itemHeader ml-auto text-left">  <span className='cursor-pointer' onClick={() => router.push('/men')}>Men</span>   <span className='GreyText ml-2'>   / Summer FIne</span></p>
+            <p className=" itemHeader ml-auto text-left">  <span className='cursor-pointer' onClick={() => router.push('/men')}>Men</span>   <span className='GreyText ml-2 cursor-pointer' onClick={() => router.push('/summerFine')}>   / Summer FIne</span></p>
             <p className='itemHeader_Main text-5xl '>{productItem.name}</p>
             <p className='font-light mt-4 text-4xl'>{productItem.category}</p>
             <p className='font-light mt-4 text-3xl'>${productItem.price}</p>
@@ -34,7 +40,7 @@ export default function item({ productItem }) {
                     <p className='pr-4'>XXL</p>
 
                 </div>
-                <div className='bg-black bag mt-10'>
+                <div className='bg-black bag mt-10 cursor-pointer'>
                     <p onClick={addToCart} className='text-center text-white bagText '>Add to bag</p>
                 </div>
                 <hr className='description_line' />

@@ -1,88 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../component/Footer'
 import Header from '../component/Header'
 import { useRouter } from 'next/router'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function checkoutOne() {
   const router = useRouter()
-
+  const dispatch = useDispatch()
+  const cart = useSelector((state) => state.cart.products)
+  console.log(cart);
   return (
     <div>
       <Header />
       <p className="checkOne text-6xl "> <span >1</span ><span className="pl-5">-</span><span className='GreyText pl-4'>2</span><span className="pl-5">-</span><span className='GreyText pl-4'>3</span></p>
       <p className='shipping text-5xl mb-20'>CART</p>
-      <hr className='cart' />
-      <div className='flex justify-around mt-6 mb-6'>
-        <div className="basis-1/4">
-          <img className='cartImg ml-20' src="./dd.png" />
 
-        </div>
-        <div className="mt-8 basis-1/2">
-          <div className='ml-40'>
-            <div>
-              <div className='checkoutHeader flex justify-start'>
-                <p className='text-2xl'>Limted Multicolor Sweater</p>
-
-              </div>
-            </div>
-            <div className="flex justify-start mt-8">
-              <p className="smallerText font-semibold	">Color</p>
-              <div>
-                <div className='color flex justify-center ml-10'></div>
-              </div>
-              <p className="ml-20 smallerText font-semibold	count">- 1 +</p>
-            </div>
-            <div className="flex justify-start mt-4">
-              <p className='smallerText font-semibold'>size : XXL</p>
-            </div>
+      {
+        cart.map((cartItem) => (
+          <div key={cartItem._id}>
+            <p>{cartItem.id}</p>
 
           </div>
-        </div>
+        ))
+      }
+      <p>{cart.name}</p>
 
-
-        <div className='basis-1/4'>
-          <p className='smallerText font-semibold text-3xl'>$100</p>
-
-        </div>
-
-      </div>
-
-      <hr className='cart' />
-      <div className='flex justify-around mt-6 mb-6'>
-        <div className="basis-1/4">
-          <img className='cartImg ml-20' src="./slides.png" />
-
-        </div>
-        <div className="mt-8 basis-1/2">
-          <div className='ml-40'>
-            <div>
-              <div className='checkoutHeader flex justify-start'>
-                <p className='text-2xl'>Nike Benasassi Slides</p>
-
-              </div>
-            </div>
-            <div className="flex justify-start mt-8">
-              <p className="smallerText font-semibold	">Color</p>
-              <div>
-                <div className='black flex justify-center ml-10'></div>
-              </div>
-              <p className="ml-20 smallerText font-semibold	count">- 1 +</p>
-            </div>
-            <div className="flex justify-start mt-4">
-              <p className='smallerText font-semibold'>size : 12</p>
-            </div>
-
-          </div>
-        </div>
-
-
-        <div className='basis-1/4'>
-          <p className='smallerText font-semibold text-3xl'>$100</p>
-
-        </div>
-
-      </div>
-      <hr className='cart' />
       <div className="mt-40 flex justify-between promo">
         <div>
           <p className='promoCode_Header checkoutHeader'>Promo Code</p>

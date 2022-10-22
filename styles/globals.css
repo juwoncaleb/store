@@ -1147,3 +1147,8 @@ width: 50px;
   left: 33px;
   top: 27px;
 }
+
+.cartCount{
+  position: relative;
+  bottom: 23px;
+}

@@ -6,14 +6,19 @@ import { useState } from 'react'
 function product({ allProducts }) {
    const router = useRouter()
         // a state that handles the display of the product in the ui
- const [productList, setProductList] = useState(allProducts)
+        const [newProduct, setNewProduct] = useState(allProducts)
+ console.log(allProducts);
 
     // This handle the deletion of an item from the UI AND DATABASE
     const handleDelete = async (id) => {
+        4
+        123356
+        1 !== 4
+        console.log(id);
         try {
             const res = await axios.delete("/api/products/" + id)
             // this handles the delete in the UI
-            productList.splice(id, 1)
+            setNewProduct (newProduct.filter ((product)=> product._id !== id))
         } catch (error) {
             console.log(error);
         }
@@ -83,9 +88,9 @@ function product({ allProducts }) {
                     <p>Actions</p>
                 </div>
                 {
-                    allProducts.map((productItem) => (
+                    newProduct.map((productItem) => (
                         <div className='flex justify-around productHeader mt-4 pt-2' key={productItem._id}>
-                            <p>{productItem._id}</p>
+                            <p>{productItem.name}</p>
                             <p>{productItem._id}</p>
                             <p>{productItem._id}</p>
                             <p>{productItem._id}</p>

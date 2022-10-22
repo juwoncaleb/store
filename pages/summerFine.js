@@ -8,7 +8,7 @@ export default function summerFine({ allProducts }) {
     return (
         <div>
             <Header />
-            <p className=" itemHeader ml-auto text-left">  <span className='cursor-pointer' onClick={() => router.push('/men')}>Men</span>   <span className='GreyText ml-2'>   / Summer FIne</span></p>
+            <p className=" itemHeader ml-auto text-left">  <span className='cursor-pointer' onClick={() => router.push('/men')}>Men</span>  </p>
             <p className='itemHeader_Main text-5xl text-left'>SUMMER FINE SELECTON</p>
             <div class="grid productSection lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 mt-10">
                 {
@@ -32,7 +32,8 @@ export default function summerFine({ allProducts }) {
 
 export async function getServerSideProps() {
     const prodRes = await fetch("http://localhost:3000/api/products")
-    const data = await prodRes.json()
+    const data = await prodRes.json(JSON.stringify(prodRes))
+
     console.log(data);
     return {
         props: {

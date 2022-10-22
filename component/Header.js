@@ -39,13 +39,18 @@ function Header() {
             className="navIcon"
             src="https://img.icons8.com/ios/50/undefined/user--v3.png"
           />
-          <p className="cartItem">      {orderQuantity}
+
+
+          <div className="cursor-pointer" onClick={() => router.push('/checkoutOne')} >
+          
+            <img
+              className="navIcon "
+              src="https://img.icons8.com/ios/50/undefined/shopping-bag--v1.png"
+            />
+            <p className="cartCount"> 
+             {orderQuantity}
           </p>
-          <img
-            onClick={() => router.push('/auth')}
-            className="navIcon"
-            src="https://img.icons8.com/ios/50/undefined/shopping-bag--v1.png"
-          />
+          </div>
         </div>
       </div>
       {/* HEADER TWO */}
