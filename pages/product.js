@@ -7,13 +7,11 @@ function product({ allProducts }) {
    const router = useRouter()
         // a state that handles the display of the product in the ui
         const [newProduct, setNewProduct] = useState(allProducts)
- console.log(allProducts);
+ console.log(newProduct);
 
     // This handle the deletion of an item from the UI AND DATABASE
     const handleDelete = async (id) => {
-        4
-        123356
-        1 !== 4
+        
         console.log(id);
         try {
             const res = await axios.delete("/api/products/" + id)

@@ -1,7 +1,10 @@
 import React from 'react'
+import { useSession, signIn, signOut } from "next-auth/react"
+
 import { useRouter } from 'next/router'
 export default function signUp() {
     const router = useRouter()
+    const {data: session} = useSession()
 
     return (
         <div>
@@ -31,7 +34,7 @@ export default function signUp() {
 
 
 
-                        <div className='buttonLogin mt-10'>
+                        <div onClick={()=>signIn()} className='buttonLogin mt-10'>
                             <p className="smallerText mt-2">Signup</p>
                         </div>
                     </div>

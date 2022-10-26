@@ -23,10 +23,14 @@ const productSchema = new Schema({
     type: String,
     maxlength: 200
   },
-
-  quantity: {
+  stocks: {
     type: Number,
   },
+  
+  totalPrice: {
+    type: Number
+  }
+
 
 
 

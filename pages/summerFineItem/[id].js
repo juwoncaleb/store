@@ -4,19 +4,22 @@ import Footer from '../../component/Footer'
 import { useDispatch, useSelector } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 
 export default function item({ productItem }) {
     const dispatch = useDispatch()
     const router = useRouter()
 
-    let price = productItem.price
-    let quantity = productItem.quantity
-    console.log(`the price is $${price} and quantity is ${quantity}`);
 
+    let price = productItem.price
+    // let quantity = productItem.quantity
+    let [amount, setAmount] = useState(1)
+    const [itemSize, setItemSize] = useState("");
+    console.log(itemSize);
 
     const addToCart = () => {
-        dispatch(addProduct({ productItem, quantity, price }))
+        dispatch(addProduct({ ...productItem, itemSize,amount, price }))
     }
 
     const cart = useSelector((state) => state.cart.products)
@@ -32,16 +35,51 @@ export default function item({ productItem }) {
             <div className='ml-auto mr-auto mt-4 description'>
                 <hr className='description_line' />
                 <p>Sizes</p>
-                <div className='flex'>
-                    <p className='pr-4'>S</p>
-                    <p className='pr-4'>M</p>
-                    <p className='pr-4'>L</p>
-                    <p className='pr-4'>XL</p>
-                    <p className='pr-4'>XXL</p>
+                <div className='flex justify-between'>
+                    <div className='flex'>
+
+                        <div class="itt flex ">
+                            <div className="flex itemmSize mt-2">
+                                <p
+                                    onClick={() => {
+                                        setItemSize("XL");
+                                    }}
+                                    className="xl cursor-pointer"
+                                >
+                                    XL
+                                </p>
+                                <p
+                                    onClick={() => {
+                                        setItemSize("L");
+                                    }}
+                                    className="l cursor-pointer"
+                                >
+                                    L
+                                </p>
+                                <p
+                                    onClick={() => {
+                                        setItemSize("M");
+                                    }}
+                                    className="m cursor-pointer"
+                                >
+                                    M
+                                </p>
+                                <p
+                                    onClick={() => {
+                                        setItemSize("S");
+                                    }}
+                                    className="s cursor-pointer"
+                                >
+                                    S
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="ml-20 smallerText font-semibold	count"><span onClick={() => setAmount(amount++)} className="cursor-pointer">+</span>{amount} <span className="cursor-pointer" onClick={() => setAmount(amount--)}> -</span></p>
 
                 </div>
-                <div className='bg-black bag mt-10 cursor-pointer'>
-                    <p onClick={addToCart} className='text-center text-white bagText '>Add to bag</p>
+                <div onClick={addToCart} className='bg-black bag mt-10 cursor-pointer'>
+                    <p className='text-center text-white bagText '>Add to bag</p>
                 </div>
                 <hr className='description_line' />
                 <p className='text-left mt-6'>Description</p>

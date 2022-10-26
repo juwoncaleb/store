@@ -1093,6 +1093,11 @@ margin-left: auto;
   height: 60px;
   border: #3ac162 2px solid;
 }
+.fill{
+  width: 450px;
+  height: 60px;
+  border: black 2px solid;
+}
 .Submitt{
   height: 40px;
   width: 150px;
@@ -1151,4 +1156,8 @@ width: 50px;
 .cartCount{
   position: relative;
   bottom: 23px;
+}
+.finalCheckout{
+  width: 50%;
+  background-color: black;
 }

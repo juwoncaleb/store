@@ -8,9 +8,12 @@ export default function addProduct() {
     const [subCategory, setSubcategory] = useState('')
     const [price, setPrice] = useState('')
     const [description, setdescription] = useState('')
-    const [quantity, setQuantity] = useState('')
+    const [quantity, setQuantity] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
+    const [stocks, setStocks] = useState('')
     const [images, setImages] = useState('')
     const [files, setFiles] = useState([])
+    console.log(stocks);
     console.log(images);
     useEffect(() => {
         console.log(files);
@@ -40,17 +43,19 @@ export default function addProduct() {
             },
             body: JSON.stringify({
                 name,
+                quantity,
+                stocks,
+                totalPrice,
+                images,
+                description,
                 category,
                 subCategory,
-                description,
-                quantity,
-                price,
-                images,
+                price
+
             }),
         })
 
         let data = await res.json()
-        console.log(data);
 
     }
 
@@ -66,6 +71,7 @@ export default function addProduct() {
         let newUrl = url
         setImages(newUrl)
         alert("Upload");
+
     }
 
 
@@ -126,7 +132,7 @@ export default function addProduct() {
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Moncler , Gucci" value={name} onChange={(e) => setName(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Subcategory" value={subCategory} onChange={(e) => setSubcategory(e.target.value)} />
-                            <input className='fillOrder mt-10' type="text" id="fname" placeholder="Quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
+                            <input className='fillOrder mt-10' type="text" id="fname" placeholder="Stocks" value={stocks} onChange={(e) => setStocks(e.target.value)} />
 
 
                             <br />
