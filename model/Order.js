@@ -25,26 +25,9 @@ const orderSchema = new Schema({
         type: String,
         unique: true,
     },
-    address: [
-        {
-            street: String
-        }, {
-            address2: String
-
-        }
-        , {
-            city: String
-
-        }
-        , {
-            state: String
-
-        }
-        , {
-            phoneNumber: Number
-
-        }
-    ]
+    address: {
+        type: String,
+    }
 })
 const Order = model.Order || model("Order", orderSchema);
 export default Order

@@ -27,7 +27,7 @@ function product({ allProducts }) {
 
     return (
 
-        <div className='productAdmin headerText'>
+        <div className='productAdmin'>
             <div className='flex justify-between productTabOne pt-10'>
                 <input type='text' className="searchItem ml-10" placeholder='Search' />
 
@@ -69,9 +69,7 @@ function product({ allProducts }) {
                     </select>
                 </div>
 
-<div onClick={() => router.push('/addProduct')} className='productHeader addTocart'>
-    <p className='mt-2'>Add Product</p>
-</div>
+
             </div>
             <div className='bg-white ml-4 mr-4'>
                 <div className='flex justify-start ml-10 mt-6'>
@@ -91,8 +89,8 @@ function product({ allProducts }) {
                     newProduct.map((productItem) => (
                         <div className='flex justify-around productHeader mt-4 pt-2' key={productItem._id}>
                             <p>{productItem.name}</p>
-                            <img src={productItem.images}/>
-                            <p>{productItem.price}</p>
+                            <p>{productItem._id}</p>
+                            <p>{productItem._id}</p>
                             <p>{productItem._id}</p>
                             <p>{productItem._id}</p>
                             <div className='flex  justify-around crud'>

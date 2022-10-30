@@ -38,13 +38,13 @@ export default function item({ productItem }) {
                 <div className='flex justify-between'>
                     <div className='flex'>
 
-                        <div class="itt flex ">
+                        <div class="itt flex  ">
                             <div className="flex itemmSize mt-2">
                                 <p
                                     onClick={() => {
                                         setItemSize("XL");
                                     }}
-                                    className="xl cursor-pointer"
+                                    className="xl cursor-pointer mr-10"
                                 >
                                     XL
                                 </p>
@@ -52,7 +52,7 @@ export default function item({ productItem }) {
                                     onClick={() => {
                                         setItemSize("L");
                                     }}
-                                    className="l cursor-pointer"
+                                    className="l cursor-pointer mr-10"
                                 >
                                     L
                                 </p>
@@ -60,7 +60,7 @@ export default function item({ productItem }) {
                                     onClick={() => {
                                         setItemSize("M");
                                     }}
-                                    className="m cursor-pointer"
+                                    className="m cursor-pointer mr-10"
                                 >
                                     M
                                 </p>
@@ -68,7 +68,7 @@ export default function item({ productItem }) {
                                     onClick={() => {
                                         setItemSize("S");
                                     }}
-                                    className="s cursor-pointer"
+                                    className="s cursor-pointer mr-10"
                                 >
                                     S
                                 </p>

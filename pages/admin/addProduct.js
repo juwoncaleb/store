@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useCallback, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone';
-export default function AddProduct() {
+export default function addProduct() {
 
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
@@ -70,6 +70,7 @@ export default function AddProduct() {
         const { url } = upload.data
         let newUrl = url
         setImages(newUrl)
+        alert("Upload");
 
     }
 
@@ -113,9 +114,10 @@ export default function AddProduct() {
 
                         {files.length > 0 && <div>
                             {files.map((file, index) =>
-                                <div className='mt-20 flex justify-around' >
-                                    <img className='uploadimages' src={file} key={index} />
-                                    <p onClick={uploadImages} className='headerText'>UPLOAD</p>
+                                <div>
+                                    <img src={file} key={index} />
+                                    <p onClick={uploadImages}>UPLOAD</p>
+
                                 </div>
                             )
                             }

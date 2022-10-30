@@ -2,11 +2,14 @@ import React from 'react'
 import Footer from '../component/Footer'
 import Header from '../component/Header'
 import { useRouter } from 'next/router'
+import { useSession, signIn, signOut } from "next-auth/react"
+
 
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function checkoutThree() {
   const router = useRouter()
+  const { data: session } = useSession()
 
   const cart = useSelector((state) => state.cart)
 
@@ -117,7 +120,7 @@ export default function checkoutThree() {
 
             </div>
             <form className='bg-white ml-24' action="/action.php">
-              <input className='fill mt-10' type="text" id="fname" placeholder="Name" />
+              <input className='fill mt-10' type="text" id="fname" placeholder={name} />
               <input className='fill mt-10' type="text" id="fname" placeholder="Phone number" />
               <input className='fill mt-10' type="text" id="fname" placeholder="Email" />
 

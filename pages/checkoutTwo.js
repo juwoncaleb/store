@@ -1,54 +1,34 @@
-"
 
-// export default function checkoutTwo() {
-//   const router = useRouter()
-//   const { data: session } = useSession()
-
-//   return (
-//     <div>
-//       <Header />
-//       <p className="checkoutTwo_Text text-6xl "> <span onClick={() => router.push('/checkoutOne')} className="GreyText cursor-pointer" >1</span ><span className="pl-5">-</span><span className=' pl-4 cursor-pointer'>2</span><span className="pl-5">-</span><span className='GreyText pl-4'>3</span></p>
-//       <p className='shipping_Header text-7xl '>Shipping</p>
-//       <p className='shipping_subHeader  '>ENTER YOUR EMAIL ADDRESS TO <br /> CONTINUE</p>
-//       <p className='shipping_text mt-4'>    Email will be used to track your order . If you dont have an account <br /> you will be able to create one during the shipping process </p>
-
-//       <div className='email_Input'>
-//         <div>
-//           <input placeholder='Your email address' className='email_Input_bar' />
-//         </div>
-//         <div className='button_email'>
-//           <p  className='shipping_text ' onClick={() => router.push('/checkoutThree')}>Continue</p>
-//         </div>
-//       </div>
-//       <p className='shipping_text mt-10'>Sign up with your socials</p>
-//       <div className='flex justify-center mt-4'>
-//         <img className='mr-4 signUpIcon' src="https://img.icons8.com/ios-filled/50/000000/twitter.png" />
-//         <img onClick={() => signIn()} className='signUpIcon' src="https://img.icons8.com/color/48/000000/google-logo.png" />
-//       </div>
-//       <Footer />
-//     </div>
-//   )
-// }
 
 import React from 'react'
 import Footer from '../component/Footer'
 import Header from '../component/Header'
 import { useRouter } from 'next/router'
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useDispatch, useSelector } from 'react-redux'
+import { useUser } from '@auth0/nextjs-auth0'
 
-const checkOut = ()=>{
-  const { data: session } = useSession()
-if (session) {
+
+const checkoutTwo = ()=>{
+  // const { data: session } = useSession()
+  const cart = useSelector((state) => state.cart)
+  const router = useRouter()
+  const {user, error, isLoading} = useUser()
+  console.log(user);
+  
+if (isLoading) return <div>Loading</div>
+if (user) {
+
   return(
     <div>
       <Header />
       <p className="checkoutTwo_Text text-6xl "> <span onClick={() => router.push('/checkoutOne')} className="GreyText cursor-pointer" >1</span ><span className="pl-5">-</span><span onClick={() => router.push('/checkoutTwo')} className='GreyText pl-4 cursor-pointer'>2</span><span className="pl-5">-</span><span className=' pl-4'>3</span></p>
       <p className='shipping_Header text-7xl mb-20  '>PAYMENT</p>
 
+      <p className='shipping_Header text-7xl mb-20  '>{user.name}</p>
 
       <div className='flex justify-around'>
         <div>
-          <p className='checkoutHeader text-left ml-40' >GROUND - FREE</p>
+          <a href='/api/auth/logout'  className='checkoutHeader text-left ml-40' >GROUND - FREE</a>
 
 
           <div className='finalcheckout_details flex justify-center mr-40 pl-20 mt-4'>
@@ -194,9 +174,32 @@ if (session) {
     </div>
   )
 } else {
+
   return (
-    
+    <div>
+    <Header />
+    <p className="checkoutTwo_Text text-6xl "> <span onClick={() => router.push('/checkoutOne')} className="GreyText cursor-pointer" >1</span ><span className="pl-5">-</span><span className=' pl-4 cursor-pointer'>2</span><span className="pl-5">-</span><span className='GreyText pl-4'>3</span></p>
+    <p className='shipping_Header text-7xl '>Shipping</p>
+    <p className='shipping_subHeader  '>ENTER YOUR EMAIL ADDRESS TO <br /> CONTINUE</p>
+    <p className='shipping_text mt-4'>    Email will be used to track your order . If you dont have an account <br /> you will be able to create one during the shipping process </p>
+
+    <div className='email_Input'>
+      <div>
+        <input placeholder='Your email address' className='email_Input_bar' />
+      </div>
+      <div className='button_email'>
+        <a  className='shipping_text' href='/api/auth/login'  >Continue</a>
+      </div>
+    </div>
+    <p className='shipping_text mt-10'>Sign up with your socials</p>
+    <div className='flex justify-center mt-4'>
+      <img className='mr-4 signUpIcon' src="https://img.icons8.com/ios-filled/50/000000/twitter.png" />
+      <img onClick={() => signIn()} className='signUpIcon' src="https://img.icons8.com/color/48/000000/google-logo.png" />
+    </div>
+    <Footer />
+  </div>
   )
 }
 }
 
+export default checkoutTwo

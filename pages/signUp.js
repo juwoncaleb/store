@@ -1,10 +1,13 @@
 import React from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useFormik } from 'formik'
+import login_validate from "../lib/validate"
 
 import { useRouter } from 'next/router'
 export default function signUp() {
     const router = useRouter()
     const {data: session} = useSession()
+    
 
     return (
         <div>
@@ -25,12 +28,14 @@ export default function signUp() {
                         </div>
                         <br />
                         <div className="grid">
-                            <input className='mt-10 inputSize' placeholder='Name' type='text' />
-                            <input className='mt-10 inputSize' placeholder='Email' type='email' />
-                            <input className='mt-10 inputSize' placeholder='Phone Number' type='password' />
-                            <input className='mt-10 inputSize' placeholder='Password' type='password' />
-
-                        </div>
+                        <form className='bg-white ml-2' action="/action.php" >
+                            <input onChange={(e) =>{setEmail(e.target.value)}}  className='fill mt-10' type="text" id="fname" placeholder="Name" />
+                            <input  onChange={(e) =>{setPassword(e.target.value)}}  className='fill mt-10' type="text" id="fname" placeholder="Phone number" />
+                            <div className='mt-10 bg-black log'>
+                                <p className='text-white logt smallerText'>Log in</p>
+                            </div>
+                        </form>
+                    </div>
 
 
 

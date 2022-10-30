@@ -56,16 +56,16 @@ function Header() {
       {/* HEADER TWO */}
 
       <hr className="border1 mt-1" />
-      <div className="headerText mt-4 flex justify-center  ">
-        <p className="pr-20 cursor-pointer " onClick={() => router.push('/men')}>MEN</p>
+      <div className="headerText flex justify-center ">
+        <p className="mr-40 mt-2 cursor-pointer " onClick={() => router.push('/men')}>MEN</p>
 
-        <p className="pr-20 cursor-pointer	" onClick={() => router.push('/women')}>WOMEN</p>
+        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/women')}>WOMEN</p>
 
-        <p className="pr-20 cursor-pointer	" onClick={() => router.push('/kids')}>KIDS</p>
-        <p className="pr-20 cursor-pointer	" onClick={() => router.push('/shoes')}>SHOES</p>
+        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/kids')}>KIDS</p>
+        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/shoes')}>SHOES</p>
 
-        <p className="pr-20 cursor-pointer	" onClick={() => router.push('/cap')}>CAPS</p>
-        <p className="pr-20 cursor-pointer	" onClick={() => router.push('/discount')}> DISCOUNT-SALE</p>
+        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/cap')}>CAPS</p>
+        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/discount')}> DISCOUNT-SALE</p>
       </div>
       <hr className="border1 mt-3" />
 

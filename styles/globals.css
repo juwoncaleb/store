@@ -6,14 +6,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+.signn{
+  color: red;
+}
+.log{
+  height: 50px;
+}
 /* HEADER */
 .navIcon {
   height: 30px;
   margin-top: 20px;
 }
-
+.logt{
+  position: relative;
+  top:10px
+}
 .backgroundImage {
   object-fit: cover;
 }
@@ -1147,6 +1154,11 @@ width: 50px;
 .desc{
   text-align: start;
 }
+.addTocart{
+  width: 150px;
+  border: #0C090A 2px solid;
+  border-radius: 10px;
+}
 .cartItem{
   position: relative;
   left: 33px;
@@ -1160,4 +1172,11 @@ width: 50px;
 .finalCheckout{
   width: 50%;
   background-color: black;
+}
+.uploadimages{
+  width: 100px;
+}
+.uploadicon{
+  width: 50px;
+  height: 20px;
 }
