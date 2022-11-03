@@ -22,7 +22,7 @@ export default function item({ productItem }) {
         dispatch(addProduct({ ...productItem, itemSize,amount, price }))
     }
 
-    const cart = useSelector((state) => state.cart.products)
+    const cart = useSelector((state) => state.cart)
     console.log(cart);
     return (
         <div>
@@ -42,7 +42,7 @@ export default function item({ productItem }) {
                             <div className="flex itemmSize mt-2">
                                 <p
                                     onClick={() => {
-                                        setItemSize("XL");
+                                        setItemSize("Extra-Large");
                                     }}
                                     className="xl cursor-pointer mr-10"
                                 >
@@ -50,7 +50,7 @@ export default function item({ productItem }) {
                                 </p>
                                 <p
                                     onClick={() => {
-                                        setItemSize("L");
+                                        setItemSize("Large");
                                     }}
                                     className="l cursor-pointer mr-10"
                                 >
@@ -58,7 +58,7 @@ export default function item({ productItem }) {
                                 </p>
                                 <p
                                     onClick={() => {
-                                        setItemSize("M");
+                                        setItemSize("Meduim");
                                     }}
                                     className="m cursor-pointer mr-10"
                                 >
@@ -66,7 +66,7 @@ export default function item({ productItem }) {
                                 </p>
                                 <p
                                     onClick={() => {
-                                        setItemSize("S");
+                                        setItemSize("Small");
                                     }}
                                     className="s cursor-pointer mr-10"
                                 >
@@ -74,6 +74,7 @@ export default function item({ productItem }) {
                                 </p>
                             </div>
                         </div>
+                <p className='itemsize mt-2'>{itemSize}</p>
                     </div>
                     <p className="ml-20 smallerText font-semibold	count"><span onClick={() => setAmount(amount++)} className="cursor-pointer">+</span>{amount} <span className="cursor-pointer" onClick={() => setAmount(amount--)}> -</span></p>
 

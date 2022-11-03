@@ -5,7 +5,6 @@ import { useFormik } from 'formik'
 import { useState } from 'react'
 
 const auth = () => {
-    const { data: session } = useSession()
     
     if (session) {
         return (

@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../component/Footer'
 import Header from '../component/Header'
 import Link from "next/link"
+import axios from 'axios'
 
 
 export default function summerFine({ allProducts }) {
@@ -30,14 +31,11 @@ export default function summerFine({ allProducts }) {
     )
 }
 
-export async function getServerSideProps() {
-    const prodRes = await fetch("http://localhost:3000/api/products")
-    const data = await prodRes.json(JSON.stringify(prodRes))
-
-    console.log(data);
+export const getServerSideProps = async ()=> {
+    const prodRes = await axios.get("http://localhost:3000/api/products")
     return {
         props: {
-            allProducts: data
+            allProducts: prodRes.data
         }
     }
 }

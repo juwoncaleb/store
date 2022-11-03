@@ -1,16 +1,19 @@
 import '../styles/globals.css'
 import { Provider } from "react-redux"
-import store from  "../app/store"
-import {UserProvider } from "@auth0/nextjs-auth0"
+import { persistor, store } from "../app/store"
+import withRedux from 'next-redux-wrapper';
+import { PersistGate } from 'redux-persist/integration/react';
 
-function MyApp({ Component, pageProps, session }) {
+
+
+function MyApp({ Component, pageProps }) {
   return (
-    <UserProvider >
-      <Provider store={store}>
+
+    <PersistGate loading={null} persistor={persistor}>
       <Component {...pageProps} />
-    </Provider>
-    </UserProvider>
+    </PersistGate>
   )
 }
 
-export default MyApp
+const makeStore = () => store;
+export default withRedux(makeStore)(MyApp);
