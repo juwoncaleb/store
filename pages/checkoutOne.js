@@ -3,6 +3,7 @@ import Footer from '../component/Footer'
 import Header from '../component/Header'
 import { useRouter } from 'next/router'
 import { incrementQuantity, decrementQuantity, calcTotal } from '../redux/cartSlice'
+import { resetCart, removeItem } from '../redux/cartSlice'
 
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -10,10 +11,11 @@ export default function checkoutOne() {
   const router = useRouter()
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart)
+  console.log(cart);
 
-  const removeItem = () => {
-    dispatch(removeItem({ ...productItem, itemSize,amount, price }))
-}
+  const reset = () => {
+    dispatch(resetCart())
+  }
 
 
   return (
@@ -57,11 +59,16 @@ export default function checkoutOne() {
               </div>
 
 
-              <div className='basis-1/4'>
+              <div className='basis-1/4 '>
                 <p className='smallerText font-semibold text-3xl'>$ {items.price * items.amount}</p>
 
+                <img className='deleteItemIcon mt-2 ' onClick={() => {
+                  dispatch(removeItem(items._id))
+                }}  src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png" />
 
+                
               </div>
+              
 
             </div>
 
@@ -69,6 +76,8 @@ export default function checkoutOne() {
           </div>
         ))
       }
+
+      <p className='shipping text-2xl mt-4' onClick={reset}>RESET</p>
       <div className="mt-40 flex justify-between promo">
         <div>
           <p className='promoCode_Header checkoutHeader'>Promo Code</p>
@@ -83,7 +92,7 @@ export default function checkoutOne() {
 
         <div className='basis-1/3 mr-20'>
           <div className='flex justify-between final_checkout_Header'>
-            <p>2 PRODUCTS</p>
+            <p>PRODUCTS</p>
             $ {cart.total}
           </div>
           <div className='flex justify-between smallerText font-semibold mt-4'>

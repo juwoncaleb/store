@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 function Header() {
   const router = useRouter()
-  const orderQuantity = useSelector((state) => state.cart.cartQuantity)
+  const orderQuantity = useSelector((state) => state.cart.products.length)
   console.log(orderQuantity);
   return (
 

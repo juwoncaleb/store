@@ -46,18 +46,19 @@ const cart = createSlice({
 
         },
         resetCart:(state)=>{
-            state =initialState
+            state.products= []
         },
 
+
         removeItem: (state, action) => {
-            const removeItem = state.cart.filter((item) => item.id !== action.payload);
-            state.cart = removeItem;
+            const itemId = action.payload
+            state.products= state.products.filter((item) => item._id !== itemId);
         },
     }
 })
 
 //export the actions out 
-export const { calcTotal,addProduct, reset, incrementQuantity, decrementQuantity,resetCart } = cart.actions;
+export const { calcTotal,addProduct, reset, incrementQuantity, decrementQuantity,resetCart,removeItem } = cart.actions;
 const cartReducer = cart.reducer
 
 export default cartReducer;

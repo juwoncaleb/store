@@ -21,9 +21,7 @@
   position: relative;
   top:10px
 }
-.backgroundImage {
-  object-fit: cover;
-}
+
 
 .lacoste {
   width: 130px;
@@ -119,16 +117,20 @@ p {
   margin-right: auto;
 }
 
+
 .backgroundImage {
+  margin-top: 20px;
   height: 1000px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  object-fit: cover;
+
 }
 
 @media only screen and (max-width: 565px) {
   .backgroundImage {
-    height: 80vh;
+    height: 500px;
   }
 }
 
@@ -226,12 +228,39 @@ p {
   width: 100px;
 }
 
+@media only screen and (max-width: 768px) {
+  
+.logo1 {
+  display: none;
+}
+}
+
 .tat {
   width: 300px;
   position: relative;
   top: 180px;
   margin-left: 75%;
 }
+
+@media only screen and (max-width: 997px) {
+  .tat {
+    width: 250px;
+    position: relative;
+    top: 180px;
+    right: 100px;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .tat {
+    width: 100px;
+    position: relative;
+    top: 180px;
+    right: 100px;
+  }
+}
+
+
 
 .essential_text {
   font-family: Archivo;
@@ -417,6 +446,15 @@ h1 {
 .lacoste_Text {
   position: relative;
   left: 20px;
+  font-size: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .lacoste_Text {
+    position: relative;
+    left: 20px;
+    font-size: 25px;
+
+  }
 }
 
 .footer {
@@ -1184,3 +1222,10 @@ width: 50px;
   color: red;
   font-size:20px
 ;}
+
+.deleteItemIcon{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 100px;
+  margin-left: 210px;
+}

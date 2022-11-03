@@ -5,9 +5,9 @@ export default function LandingPage() {
 
   return (
     <div className="App">
-        <Header/>
+        {/* <Header/> */}
       <div className="landingPage_text">
-        <p className="text-5xl md:text-8xl landingPage_MainText">
+        <p className="text-6xl md:text-8xl landingPage_MainText">
           Memorial Day
         </p>
         <p className="text-5xl md:text-8xl landingPage_MainText">
@@ -47,7 +47,7 @@ export default function LandingPage() {
         <div className="flex world  ">
           <img className="recomend_logo" src="logo1.png" />
 
-          <p className="lacoste_Text text-4xl ">The Lacoste World</p>
+          <p className="lacoste_Text ">The Lacoste World</p>
         </div>
         {/* LINES */}
         <img className="tat" src="tat.png" />
@@ -55,21 +55,21 @@ export default function LandingPage() {
         <div className="lineBar">
           <div className="line">
             <hr className="bars" />
-            <p className="footwear text-7xl">The Latest Footwear</p>
+            <p className="footwear md:text-7xl text-4xl ">The Latest Footwear</p>
             <hr className="bars" />
             <div className="flex justify-center">
               <img className="logo1 mr-4" src="logo1.png" />
 
-              <p className="footwear text-7xl" id="black">
-                The Latest Leather Goods
+              <p className="footwear md:text-7xl text-4xl mr-20" id="black">
+                The Latest Leather 
               </p>
             </div>
             <hr className="bars" />
             <div className="flex justify-center">
-              <p className="footwear text-7xl">Summer Accessories</p>
+              <p className="footwear md:text-7xl text-4xl">Summer Accessories</p>
             </div>
             <hr className="bars" />
-            <p className="footwear text-7xl">Summer Selection</p>
+            <p className="footwear md:text-7xl text-4xl">Summer Selection</p>
             <hr className="bars" />
           </div>
         </div>
