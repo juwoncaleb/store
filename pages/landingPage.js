@@ -1,11 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 export default function LandingPage() {
 
   return (
     <div className="App">
-        {/* <Header/> */}
+      <Header/>
       <div className="landingPage_text">
         <p className="text-6xl md:text-8xl landingPage_MainText">
           Memorial Day
@@ -61,7 +61,7 @@ export default function LandingPage() {
               <img className="logo1 mr-4" src="logo1.png" />
 
               <p className="footwear md:text-7xl text-4xl mr-20" id="black">
-                The Latest Leather 
+                The Latest Leather
               </p>
             </div>
             <hr className="bars" />
@@ -76,7 +76,7 @@ export default function LandingPage() {
       </div>
       <div className="flex lg">
         <img className="recomend_logo" src="logo1.png" />
-        <p className="text-4xl recommended_text">Recommended For You</p>
+        <p className="text-4xl lacoste_Text ">Recommended For You</p>
       </div>
 
       <div className="recommended">
@@ -135,48 +135,40 @@ export default function LandingPage() {
         <div className="Lacoste_inside flex">
           <img className="inside" src="logo1.png" />
 
-          <p className="text-4xl essential_text">Lacoste Inside</p>
+          <p className="text-4xl lacoste_Text ">Lacoste Inside</p>
         </div>{" "}
-        <div class="container">
-          <div class="card">
-            <img src="heroimg.jpg" />
-            <div class="card__head">SUMMER COLLECTION</div>
-          </div>
-          <div class="card">
-            <img src="teal.png" />
-            <div class="card__head">TYLER AND FRIENDS</div>
-          </div>
-          <div class="card">
-            <img src="mjh.png" />
-            <div class="card__head">TEES</div>
-          </div>
-          <div class="card">
-            <img src="spring.jpg" />
-            <div class="card__head">WINTER</div>
-          </div>
-          <div class="card">
-            <img src="m2.jpg" />
-            <div class="card__head">CLOTHES</div>
+        <div className="containerTop">
+          <div class="container">
+            <div class="card">
+              <img src="heroimg.jpg" />
+              <div class="card__head">SUMMER COLLECTION</div>
+            </div>
+            <div class="card">
+              <img src="teal.png" />
+              <div class="card__head">TYLER AND FRIENDS</div>
+            </div>
+            <div class="card">
+              <img src="mjh.png" />
+              <div class="card__head">TEES</div>
+            </div>
+            <div class="card">
+              <img src="spring.jpg" />
+              <div class="card__head">WINTER</div>
+            </div>
+            <div class="card">
+              <img src="m2.jpg" />
+              <div class="card__head">CLOTHES</div>
+            </div>
           </div>
         </div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/> <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/> <br/>
-        <br/>
-        <br/>
+
       </div>
-<Footer/>
-      
+
+      <div className="">
+        <Footer />
+
+      </div>
     </div>
-    
+
   );
 }

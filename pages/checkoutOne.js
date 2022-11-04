@@ -33,43 +33,45 @@ export default function checkoutOne() {
 
             <hr className='cart' />
             <div className='flex justify-around mt-6 mb-6'>
-              <div className="basis-1/4">
-                <img className='cartImg ml-20' src={items.images} />
+
+              <div className="">
+                <img className='cartImg ' src={items.images} />
 
               </div>
-              <div className="mt-8 basis-1/2">
-                <div className='ml-40'>
-                  <div>
-                    <div className='checkoutHeader flex justify-start'>
-                      <p className='text-2xl'>{items.name}</p>
 
-                    </div>
-                  </div>
-                  <div className="flex justify-start mt-8">
-                    <p className="smallerText font-semibold	">Color</p>
-                    <div>
-                      <div className='color flex justify-center ml-10'></div>
-                    </div>
-                  </div>
-                  <div className="flex justify-start mt-4">
-                    <p className='smallerText font-semibold'>size : {items.itemSize}</p>
-                  </div>
 
+              <div className="mt-8 ">
+
+                <div>
+                  <div className='checkoutHeader flex justify-start'>
+                    <p className='text-2xl'>{items.name}</p>
+
+                  </div>
                 </div>
+                <div className="flex justify-start mt-8">
+                  <p className="smallerText font-semibold	">Color</p>
+                  <div>
+                    <div className='color flex justify-center ml-10'></div>
+                  </div>
+                </div>
+
+                <div className="flex justify-start mt-4">
+                  <p className='smallerText font-semibold'>size : {items.itemSize}</p>
+                </div>
+
+
+
+
               </div>
 
-
-              <div className='basis-1/4 '>
+              <div>
                 <p className='smallerText font-semibold text-3xl'>$ {items.price * items.amount}</p>
 
                 <img className='deleteItemIcon mt-2 ' onClick={() => {
                   dispatch(removeItem(items._id))
-                }}  src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png" />
+                }} src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png" />
 
-                
               </div>
-              
-
             </div>
 
             <hr className='cart' />
@@ -78,19 +80,19 @@ export default function checkoutOne() {
       }
 
       <p className='shipping text-2xl mt-4' onClick={reset}>RESET</p>
-      <div className="mt-40 flex justify-between promo">
-        <div>
-          <p className='promoCode_Header checkoutHeader'>Promo Code</p>
-          <div className='flex justify-around mt-6'>
-            <input className='promoCode' placeholder='Enter your promo code' />
 
-            <div className='ml-4 promoButton smallerText'>
-              Apply
-            </div>
+
+      <div className="mt-40 grid justify-center ml-auto proceed">
+        <p className=' checkoutHeader mb-20'>Promo Code</p>
+        <div className='flex'>
+          <input className='promoCode' placeholder='Enter your promo code' />
+          <div className='ml-4 promoButton smallerText'>
+            Apply
           </div>
         </div>
 
-        <div className='basis-1/3 mr-20'>
+
+        <div className=' mt-10 '>
           <div className='flex justify-between final_checkout_Header'>
             <p>PRODUCTS</p>
             $ {cart.total}

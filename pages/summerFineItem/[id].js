@@ -19,7 +19,7 @@ export default function item({ productItem }) {
     console.log(itemSize);
 
     const addToCart = () => {
-        dispatch(addProduct({ ...productItem, itemSize,amount, price }))
+        dispatch(addProduct({ ...productItem, itemSize, amount, price }))
     }
 
     const cart = useSelector((state) => state.cart)
@@ -36,7 +36,7 @@ export default function item({ productItem }) {
                 <hr className='description_line' />
                 <p>Sizes</p>
                 <div className='flex justify-between'>
-                    <div className='flex'>
+                    <div className='flex fits'>
 
                         <div class="itt flex  ">
                             <div className="flex itemmSize mt-2">
@@ -74,9 +74,10 @@ export default function item({ productItem }) {
                                 </p>
                             </div>
                         </div>
-                <p className='itemsize mt-2'>{itemSize}</p>
+                        <p className='itemsize mt-2 '>{itemSize}</p>
+                        <p className="ml-20 smallerText font-semibold	count"><span onClick={() => setAmount(amount++)} className="cursor-pointer">+</span>{amount} <span className="cursor-pointer" onClick={() => setAmount(amount--)}> -</span></p>
+
                     </div>
-                    <p className="ml-20 smallerText font-semibold	count"><span onClick={() => setAmount(amount++)} className="cursor-pointer">+</span>{amount} <span className="cursor-pointer" onClick={() => setAmount(amount--)}> -</span></p>
 
                 </div>
                 <div onClick={addToCart} className='bg-black bag mt-10 cursor-pointer'>

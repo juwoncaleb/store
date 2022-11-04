@@ -56,16 +56,15 @@ function Header() {
       {/* HEADER TWO */}
 
       <hr className="border1 mt-1" />
-      <div className="headerText flex justify-center ">
-        <p className="mr-40 mt-2 cursor-pointer " onClick={() => router.push('/men')}>MEN</p>
+      <div className="headerText flex justify-between ">
+        <p className="mt-2 men cursor-pointer " onClick={() => router.push('/men')}>MEN</p>
 
-        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/women')}>WOMEN</p>
+        <p className="mt-2  cursor-pointer	" onClick={() => router.push('/women')}>WOMEN</p>
 
-        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/kids')}>KIDS</p>
-        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/shoes')}>SHOES</p>
+        <p className="mt-2  cursor-pointer	" onClick={() => router.push('/kids')}>KIDS</p>
+        <p className="mt-2  cursor-pointer	" onClick={() => router.push('/shoes')}>SHOES</p>
 
-        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/cap')}>CAPS</p>
-        <p className="mr-40 mt-2  cursor-pointer	" onClick={() => router.push('/discount')}> DISCOUNT-SALE</p>
+        <p className="mt-2  dis cursor-pointer	" onClick={() => router.push('/discount')}> DISCOUNT-SALE</p>
       </div>
       <hr className="border1 mt-3" />
 

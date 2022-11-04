@@ -15,7 +15,7 @@ export default function summerFine({ allProducts }) {
                 {
                     allProducts.map((summerFineItem) => (
                         <Link href={`/summerFineItem/${summerFineItem._id}`} passHref>
-                            <div className='productGrid' key={summerFineItem._id}>
+                            <div className='productGrid ' key={summerFineItem._id}>
                                 <img className='productImages' src={summerFineItem.images} />
                                 <br />
                                 {summerFineItem.name}
