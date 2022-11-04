@@ -113,7 +113,7 @@ export default function AddProduct() {
 
                         {files.length > 0 && <div>
                             {files.map((file, index) =>
-                                <div className='mt-20 flex justify-around' >
+                                <div className='mt-20 flex justify-around' key={file.id} >
                                     <img className='uploadimages' src={file} key={index} />
                                     <p onClick={uploadImages} className='headerText'>UPLOAD</p>
                                 </div>
@@ -126,7 +126,7 @@ export default function AddProduct() {
 
                     <div className='sendDb'>
                         <form action="/action.php">
-                            <label for="fname mb-1">Name</label>
+                            <label >Name</label>
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Moncler , Gucci" value={name} onChange={(e) => setName(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Subcategory" value={subCategory} onChange={(e) => setSubcategory(e.target.value)} />
@@ -135,7 +135,7 @@ export default function AddProduct() {
 
                             <br />
                             <input className='fillOrder mt-10' type="text" id="lname" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
-                            <textarea className='fillOrder mt-10' id="txtid" name="txtname" rows="8" cols="100" maxlength="200" placeholder='Description' value={description} onChange={(e) => { setdescription(e.target.value) }} >
+                            <textarea className='fillOrder mt-10' id="txtid" name="txtname" rows="8" cols="100" maxLength="200" placeholder='Description' value={description} onChange={(e) => { setdescription(e.target.value) }} >
 
                             </textarea>
                             <br />
