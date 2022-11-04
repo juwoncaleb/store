@@ -87,6 +87,7 @@ export default function LandingPage() {
             <p>$200</p>
 
           </div>
+          
           <div>
             <img className="" src="jon.png" />
 
