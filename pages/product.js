@@ -3,20 +3,20 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import { useState } from 'react'
 
-function product({ allProducts }) {
-   const router = useRouter()
-        // a state that handles the display of the product in the ui
-        const [newProduct, setNewProduct] = useState(allProducts)
- console.log(newProduct);
+function Product({ allProducts }) {
+    const router = useRouter()
+    // a state that handles the display of the product in the ui
+    const [newProduct, setNewProduct] = useState(allProducts)
+    console.log(newProduct);
 
     // This handle the deletion of an item from the UI AND DATABASE
     const handleDelete = async (id) => {
-        
+
         console.log(id);
         try {
             const res = await axios.delete("/api/products/" + id)
             // this handles the delete in the UI
-            setNewProduct (newProduct.filter ((product)=> product._id !== id))
+            setNewProduct(newProduct.filter((product) => product._id !== id))
         } catch (error) {
             console.log(error);
         }
@@ -69,9 +69,9 @@ function product({ allProducts }) {
                     </select>
                 </div>
 
-<div onClick={() => router.push('/addProduct')} className='productHeader addTocart'>
-    <p className='mt-2'>Add Product</p>
-</div>
+                <div onClick={() => router.push('/addProduct')} className='productHeader addTocart'>
+                    <p className='mt-2'>Add Product</p>
+                </div>
             </div>
             <div className='bg-white ml-4 mr-4'>
                 <div className='flex justify-start ml-10 mt-6'>
@@ -91,13 +91,13 @@ function product({ allProducts }) {
                     newProduct.map((productItem) => (
                         <div className='flex justify-around productHeader mt-4 pt-2' key={productItem._id}>
                             <p>{productItem.name}</p>
-                            <img src={productItem.images}/>
+                            <img src={productItem.images} />
                             <p>{productItem.price}</p>
                             <p>{productItem._id}</p>
                             <p>{productItem._id}</p>
                             <div className='flex  justify-around crud'>
                                 <img className='editIcon' src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-edit-mintab-for-ios-becris-lineal-becris.png" />
-                                <img onClick={()=> handleDelete(productItem._id)} className='editIcon ' src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png" />
+                                <img onClick={() => handleDelete(productItem._id)} className='editIcon ' src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png" />
                             </div>
                         </div>
 
@@ -121,7 +121,7 @@ function product({ allProducts }) {
     )
 }
 
-export default product
+export default Product
 
 export async function getServerSideProps() {
     const prodRes = await fetch("http://localhost:3000/api/products")

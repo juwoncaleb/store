@@ -9,7 +9,7 @@ import Header from "../component/Header";
 
 // AUTHENTICATION
 import { useSession, signIn, signOut } from "next-auth/react"
-export default function men() {
+export default function Men() {
   const router = useRouter()
 
 
@@ -22,18 +22,18 @@ export default function men() {
 
       <img className="menfashion ml-auto mr-auto  " src="menfashion.png" />
 
-      <p className="headerText text-2xl flex justify-start ml-40  mt-20|"> Men's style</p>
+      <p className="text-3xl mb-20 justify-start menChoice "> Men</p>
 
 
-      <div class="grid grid-rows-3 grid-flow-col md:ml-10 gap-4 ">
-        <div class="row-start-2 row-span-2 ...">  <div className="" onClick={() => router.push('/summerFine')}>
+      <div className="grid grid-rows-3 grid-flow-col md:ml-10 gap-4 ">
+        <div className="row-start-2 row-span-2 ...">  <div className="" onClick={() => router.push('/summerFine')}>
           <img className="  cursor-pointer imgOption  " src="koofo.jpg" />
           <p className="headerText text-1xl md:text-2xl flex cursor-pointer textFix"> Summer Fine</p>
           <hr className="textline textFix" />
 
         </div>
         </div>
-        <div class="row-end-3 row-span-2 ...">
+        <div className="row-end-3 row-span-2 ...">
           <div className=" "  >
             <img onClick={() => router.push('/casual')} className="cursor-pointer mt-20 imgOption " src="bro.jfif" />
             <p className=" text-1xl md:text-2xl flex  "> Casual</p>
@@ -42,7 +42,7 @@ export default function men() {
 
           </div>
         </div>
-        <div class="row-start-2 row-span-2 ...">  <div className="menStyleGrid_third" onClick={() => router.push('/office')}>
+        <div className="row-start-2 row-span-2 ...">  <div className="menStyleGrid_third" onClick={() => router.push('/office')}>
           <img className="cursor-pointer imgOption  " src="work.jpg" />
           <p className="headerText text-1xl md:text-2xl flex  "> Office</p>
           <hr className="textline_3" />
@@ -52,8 +52,8 @@ export default function men() {
       </div>
 
 
-      <div class="grid grid-rows-3 grid-flow-col gap-4 md:ml-10 mb-10">
-        <div class="row-start-2 row-span-2 ...">
+      <div className="grid grid-rows-3 grid-flow-col gap-4 md:ml-10 mb-10">
+        <div className="row-start-2 row-span-2 ...">
           <div className="" onClick={() => router.push('/urban')}>
             <img className="cursor-pointer imgOption   " src="sk.jpg" />
             <p className="headerText text-1xl md:text-2xl flex  "> Urban</p>
@@ -63,7 +63,7 @@ export default function men() {
 
         </div>
 
-        <div class="row-end-3 row-span-2 ...">
+        <div className="row-end-3 row-span-2 ...">
 
           <div className="cursor-pointer " onClick={() => router.push('/comfort')}>
             <img className=" imgOption " src="ss.jpg" />
@@ -72,7 +72,7 @@ export default function men() {
 
           </div>
         </div>
-        <div class="row-start-2 row-span-2 ..."><div className=" " onClick={() => router.push('/retro')}>
+        <div className="row-start-2 row-span-2 ..."><div className=" " onClick={() => router.push('/retro')}>
           <img className=" cursor-pointer imgOption " src="jerry.jpg" />
           <p className="headerText text-1xl md:text-2xl flex  " > Retro</p>
           <hr className="textline_5" />
@@ -122,9 +122,31 @@ export default function men() {
         </div>
       </div>
 
-      <div className="lastTab">
-        <p className="headerText text-3xl mb-20 mt-20"> Top Pick This Month</p>
-        <div class="grid grid-cols-4 lg:grid-cols-4 grid-cols-2 mt-20 grid gap-4">
+      <div className="lastTab mt-20">
+        <p className="headerText text-3xl  topIck"> Top Pick This Month</p>
+        
+        
+        <div className="grid grid-cols-4 lg:grid-cols-4 grid-cols-2 mt-40 grid gap-4">
+          <div>
+            <img className="topPick" src="kofi.jpg" />
+            <p>Lacoste RGB</p>
+            <p>$200</p> 
+          </div>
+          <div>
+            <img className="topPick" src="dread.png" />
+            <p>Lacoste RGB</p>
+            <p>$200</p> 
+          </div>
+          <div>
+            <img className="topPick" src="short.png" />
+            <p>Lacoste RGB</p>
+            <p>$200</p> 
+          </div>
+          <div>
+            <img className="topPick" src="sweat.png" />
+            <p>Lacoste RGB</p>
+            <p>$200</p> 
+          </div>
           <div>
             <img className="topPick" src="kofi.jpg" />
             <p>Lacoste RGB</p>

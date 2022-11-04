@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { useSession, signIn, signOut } from "next-auth/react"
 
-const checkoutTwo = () => {
+const CheckoutTwo = () => {
   const { data: session } = useSession()
   const cart = useSelector((state) => state.cart.products)
   const router = useRouter()
@@ -157,7 +157,7 @@ const checkoutTwo = () => {
 
 
               <br />
-              <textarea className='fill mt-10' id="txtid" name="txtname" rows="8" cols="100" maxlength="200" placeholder='Additiional Note' onChange={(e) => { setNote(e.target.value) }} value={note} >
+              <textarea className='fill mt-10' id="txtid" name="txtname" rows="8" cols="100" maxLength="200" placeholder='Additiional Note' onChange={(e) => { setNote(e.target.value) }} value={note} >
 
               </textarea>
 
@@ -223,4 +223,4 @@ const checkoutTwo = () => {
   }
 }
 
-export default checkoutTwo
+export default CheckoutTwo

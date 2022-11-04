@@ -1,7 +1,7 @@
 import dbConnect from "../../../utils/Mongo";
 import Order from "../../../model/Order";
 
-export default async function handler(req, res) {
+export default async function Handler(req, res) {
     // connect to database
     console.log("Connecting to the database...");
     await dbConnect()

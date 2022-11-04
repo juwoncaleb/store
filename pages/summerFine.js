@@ -5,16 +5,16 @@ import Link from "next/link"
 import axios from 'axios'
 
 
-export default function summerFine({ allProducts }) {
+export default function SummerFine({ allProducts }) {
     return (
         <div>
             <Header />
             <p className=" itemHeader ml-auto text-left">  <span className='cursor-pointer' onClick={() => router.push('/men')}>Men</span>  </p>
             <p className='itemHeader_Main text-5xl text-left'>SUMMER FINE SELECTON</p>
-            <div class="grid productSection lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 mt-10">
+            <div className="grid productSection lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 mt-10">
                 {
                     allProducts.map((summerFineItem) => (
-                        <Link href={`/summerFineItem/${summerFineItem._id}`} passHref>
+                        <Link href={`/summerFineItem/${summerFineItem._id}`} passHref  key={summerFineItem._id}>
                             <div className='productGrid ' key={summerFineItem._id}>
                                 <img className='productImages' src={summerFineItem.images} />
                                 <br />

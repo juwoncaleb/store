@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function casual() {
+export default function Casual() {
   return (
     <div>casual</div>
   )

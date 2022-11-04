@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useCallback, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone';
+
 export default function AddProduct() {
 
     const [name, setName] = useState('')
@@ -113,7 +114,7 @@ export default function AddProduct() {
 
                         {files.length > 0 && <div>
                             {files.map((file, index) =>
-                                <div className='mt-20 flex justify-around' key={file.id} >
+                                <div className='mt-20 flex justify-around' key={Math.random} >
                                     <img className='uploadimages' src={file} key={index} />
                                     <p onClick={uploadImages} className='headerText'>UPLOAD</p>
                                 </div>
@@ -126,7 +127,6 @@ export default function AddProduct() {
 
                     <div className='sendDb'>
                         <form action="/action.php">
-                            <label >Name</label>
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Moncler , Gucci" value={name} onChange={(e) => setName(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} />
                             <input className='fillOrder mt-10' type="text" id="fname" placeholder="Subcategory" value={subCategory} onChange={(e) => setSubcategory(e.target.value)} />

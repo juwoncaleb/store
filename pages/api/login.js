@@ -1,6 +1,6 @@
 import cookie from "cookie"
 
-const handler = (res, req) => {
+const Handler = (res, req) => {
     if (req.method === "POST") {
         const { username, password } = req.body
         if (

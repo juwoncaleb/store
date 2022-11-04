@@ -548,17 +548,23 @@ margin-top: 10px;
 
   }
 }
-
+.menChoice{
+  margin-right: 80%;
+  margin-top: 100px;
+}
 .footer {
   position: relative;
   top: 100px;
   background-color: #0C090A;
   color: white;
   font-family: Archivo;
-  margin-top: 400px;
+  margin-top: 100px;
 
 }
-
+.topIck{
+  position: relative;
+  top: 120px;
+}
 .icon {
   width: 30px;
   margin-left: auto;

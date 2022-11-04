@@ -7,7 +7,7 @@ import { resetCart, removeItem } from '../redux/cartSlice'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-export default function checkoutOne() {
+export default function CheckoutOne() {
   const router = useRouter()
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart)

@@ -4,7 +4,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { useFormik } from 'formik'
 import { useState } from 'react'
 
-const auth = () => {
+const Auth = () => {
     
     if (session) {
         return (
@@ -65,4 +65,4 @@ const auth = () => {
         )
     }
 }
-export default auth
+export default Auth

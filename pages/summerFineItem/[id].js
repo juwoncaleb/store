@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 
-export default function item({ productItem }) {
+export default function Item({ productItem }) {
     const dispatch = useDispatch()
     const router = useRouter()
 
@@ -38,7 +38,7 @@ export default function item({ productItem }) {
                 <div className='flex justify-between'>
                     <div className='flex fits'>
 
-                        <div class="itt flex  ">
+                        <div className="itt flex  ">
                             <div className="flex itemmSize mt-2">
                                 <p
                                     onClick={() => {

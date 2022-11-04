@@ -4,7 +4,7 @@ import { useFormik } from 'formik'
 import login_validate from "../lib/validate"
 
 import { useRouter } from 'next/router'
-export default function signUp() {
+export default function SignUp() {
     const router = useRouter()
     const {data: session} = useSession()
     

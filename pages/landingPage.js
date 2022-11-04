@@ -80,7 +80,7 @@ export default function LandingPage() {
       </div>
 
       <div className="recommended">
-        <div class="grid-container ">
+        <div className="grid-container ">
           <div>
             <img className="" src="ds.png" />
             <p>Lacoste RGB</p>
@@ -113,19 +113,19 @@ export default function LandingPage() {
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img class="grid-item grid-item-7" src="fall.jpg" alt="" />
+            <img className="grid-item grid-item-7" src="fall.jpg" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img class="grid-item grid-item-8" src="m2.jpg" alt="" />
+            <img className="grid-item grid-item-8" src="m2.jpg" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img class="grid-item grid-item-9" src="capture.png" alt="" />
+            <img className="grid-item grid-item-9" src="capture.png" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img class="grid-item grid-item-10" src="hj.png" alt="" />
+            <img className="grid-item grid-item-10" src="hj.png" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
         </div>
@@ -138,26 +138,26 @@ export default function LandingPage() {
           <p className="text-4xl lacoste_Text ">Lacoste Inside</p>
         </div>{" "}
         <div className="containerTop">
-          <div class="container">
-            <div class="card">
+          <div className="container">
+            <div className="card">
               <img src="heroimg.jpg" />
-              <div class="card__head">SUMMER COLLECTION</div>
+              <div className="card__head">SUMMER COLLECTION</div>
             </div>
-            <div class="card">
+            <div className="card">
               <img src="teal.png" />
-              <div class="card__head">TYLER AND FRIENDS</div>
+              <div className="card__head">TYLER AND FRIENDS</div>
             </div>
-            <div class="card">
+            <div className="card">
               <img src="mjh.png" />
-              <div class="card__head">TEES</div>
+              <div className="card__head">TEES</div>
             </div>
-            <div class="card">
+            <div className="card">
               <img src="spring.jpg" />
-              <div class="card__head">WINTER</div>
+              <div className="card__head">WINTER</div>
             </div>
-            <div class="card">
+            <div className="card">
               <img src="m2.jpg" />
-              <div class="card__head">CLOTHES</div>
+              <div className="card__head">CLOTHES</div>
             </div>
           </div>
         </div>
