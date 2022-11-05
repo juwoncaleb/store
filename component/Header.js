@@ -57,14 +57,14 @@ function Header() {
 
       <hr className="border1 mt-1" />
       <div className="headerText flex justify-between ">
-        <p className="mt-2 men cursor-pointer headersText " onClick={() => router.push('/men')}>MEN</p>
+        <p className="mt-2 men cursor-pointer headersText mr-2 " onClick={() => router.push('/men')}>MEN</p>
 
-        <p className="mt-2  cursor-pointer headersText	" onClick={() => router.push('/women')}>WOMEN</p>
+        <p className="mt-2  cursor-pointer headersText	mr-2 " onClick={() => router.push('/women')}>WOMEN</p>
 
-        <p className="mt-2  cursor-pointer	headersText" onClick={() => router.push('/kids')}>KIDS</p>
-        <p className="mt-2  cursor-pointer	headersText" onClick={() => router.push('/shoes')}>SHOES</p>
+        <p className="mt-2  cursor-pointer	headersText mr-2 " onClick={() => router.push('/kids')}>KIDS</p>
+        <p className="mt-2  cursor-pointer	headersText mr-2 " onClick={() => router.push('/shoes')}>SHOES</p>
 
-        <p className="mt-2  dis cursor-pointer headersText	" onClick={() => router.push('/discount')}> DISCOUNT-SALE</p>
+        <p className="mt-2  dis cursor-pointer headersText	mr-2 " onClick={() => router.push('/discount')}> DISCOUNT-SALE</p>
       </div>
       <hr className="border1 mt-3" />
 
