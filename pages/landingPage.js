@@ -50,7 +50,7 @@ export default function LandingPage() {
           <p className="lacoste_Text ">The Lacoste World</p>
         </div>
         {/* LINES */}
-        <img className="tat" src="tat.png" />
+        <img className="tat" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688338/uploads/vdj5w2dqctto29dqrrkp.png" />
 
         <div className="lineBar">
           <div className="line">
@@ -82,7 +82,7 @@ export default function LandingPage() {
       <div className="recommended">
         <div className="grid-container ">
           <div>
-            <img className="" src="ds.png" />
+            <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688470/uploads/r9tsvznmq6wnrlv05syg.png" />
             <p>Lacoste RGB</p>
             <p>$200</p>
 
