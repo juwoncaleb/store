@@ -94,22 +94,22 @@ export default function LandingPage() {
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img className="" src="bruno.png" />
+            <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690001/uploads/ag2rrn4pxeenw1uoixjc.jpg" />
 
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img src="m3.png" />
+            <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690071/uploads/lghlgvqgj8uzfugycvud.png" />
 
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img src="roe.png" />
+            <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690189/uploads/x3aufeqrjbgh0mmwkpe6.png" />
 
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img src="dd.png" />
+            <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690326/uploads/zf5ymn5e5qgxvhwjxeb5.png" />
 
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
