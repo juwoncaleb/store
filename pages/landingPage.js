@@ -25,19 +25,19 @@ export default function LandingPage() {
       <div className="flex justify-center">
         <div className="grid gap-4 grid-cols-2 landingPage_secondPage  ">
           <div>
-            <img className="image1  " src="jig.png" />
+            <img className="image1  " src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667664148/uploads/vn5axwgbjc7ylerthhyz.png" />
             <p className="catergory_subs">TrackSuit</p>
           </div>
           <div>
-            <img className="image1  " src="de.png" />
+            <img className="image1  " src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667664234/uploads/eiuvlwkdeqczoihrv08p.png" />
             <p className="catergory_subs">Blazer</p>
           </div>
           <div>
-            <img className="image1  " src="eee.png" />
+            <img className="image1  " src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667664303/uploads/dfgwpzxfq463lpaebfv3.png" />
             <p className="catergory_subs">Specials</p>
           </div>
           <div>
-            <img className="image1  " src="jon.png" />
+            <img className="image1  " src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667664328/uploads/q2dvauryarcjvte6h6lx.png" />
             <p className="catergory_subs">Sweater</p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function LandingPage() {
             <p>$200</p>
 
           </div>
-          
+
           <div>
             <img className="" src="jon.png" />
 

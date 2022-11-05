@@ -4,8 +4,12 @@ import { persistor, store } from "../app/store"
 import withRedux from 'next-redux-wrapper';
 import { PersistGate } from 'redux-persist/integration/react';
 import {SessionProvider} from 'next-auth/react'
+import {useRouter} from "next/router"
+import {useState, useEffect} from "react"
 
-
+function Loadind() {
+  
+}
 
 function MyApp({ Component, pageProps, session }) {
   return (
