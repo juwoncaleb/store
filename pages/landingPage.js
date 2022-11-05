@@ -23,7 +23,7 @@ export default function LandingPage() {
       <p className="category">Lacoste Wardtobe Essentials</p>
 
       <div className="flex justify-center">
-        <div className="grid gap-4 grid-cols-2 landingPage_secondPage  ">
+        <div className="grid gap-4 grid-cols-2 xl:grid-cols-2 landingPage_secondPage  ">
           <div>
             <img className="image1  " src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667664148/uploads/vn5axwgbjc7ylerthhyz.png" />
             <p className="catergory_subs">TrackSuit</p>

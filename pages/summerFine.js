@@ -4,8 +4,12 @@ import Header from '../component/Header'
 import Link from "next/link"
 import axios from 'axios'
 
+const isServerReq = req => !req.url.startsWith('/_next');
+
+
 
 export default function SummerFine({ allProducts }) {
+
     return (
         <div>
             <Header />
@@ -32,7 +36,8 @@ export default function SummerFine({ allProducts }) {
 }
 
 export const getServerSideProps = async ()=> {
-    const prodRes = await axios.get("http://localhost:3000/api/products")
+
+    const prodRes =  isServerReq(req) ?  await axios.get("http://localhost:3000/api/products"): null;
     return {
         props: {
             allProducts: prodRes.data
