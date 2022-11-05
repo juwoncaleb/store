@@ -89,7 +89,7 @@ export default function LandingPage() {
           </div>
 
           <div>
-            <img className="" src="jon.png" />
+            <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688849/uploads/zwgcgielxxzycvhoziv3.png" />
 
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
