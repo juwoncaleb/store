@@ -20,7 +20,7 @@ export default function Men() {
 
       <p className="headerText text-3xl md:text-8xl mt-5 mb-5">The New Collection</p>
 
-      <img className="menfashion ml-auto mr-auto  " src="menfashion.png" />
+      <img className="menfashion ml-auto mr-auto  " src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667684354/uploads/pdprvwvlgdjtmgolcsl8.png" />
 
       <p className="text-3xl mb-20 justify-start menChoice "> Men</p>
 
