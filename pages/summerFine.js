@@ -35,7 +35,7 @@ export default function SummerFine({ allProducts }) {
     )
 }
 
-export const getServerSideProps = async ()=> {
+export const getstaticprops  = async ()=> {
 
     const prodRes =  isServerReq(req) ?  await axios.get("http://localhost:3000/api/products"): null;
     return {
