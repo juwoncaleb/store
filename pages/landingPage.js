@@ -114,19 +114,19 @@ export default function LandingPage() {
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img className="grid-item grid-item-7" src="fall.jpg" alt="" />
+            <img className="grid-item grid-item-7" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690397/uploads/gadatmq5swmj8ef5satk.jpg" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img className="grid-item grid-item-8" src="m2.jpg" alt="" />
+            <img className="grid-item grid-item-8" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690001/uploads/ag2rrn4pxeenw1uoixjc.jpg" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img className="grid-item grid-item-9" src="capture.png" alt="" />
+            <img className="grid-item grid-item-9" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690523/uploads/rchylb3ofgr1g3gl6spw.png" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img className="grid-item grid-item-10" src="hj.png" alt="" />
+            <img className="grid-item grid-item-10" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690590/uploads/qmsq2abt63kdzpxhyjx5.png" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
         </div>
