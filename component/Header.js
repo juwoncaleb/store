@@ -64,7 +64,7 @@ function Header() {
         <p className="mt-2  cursor-pointer	headersText mr-2 " onClick={() => router.push('/kids')}>KIDS</p>
         <p className="mt-2  cursor-pointer	headersText mr-2 " onClick={() => router.push('/shoes')}>SHOES</p>
 
-        <p className="mt-2  dis cursor-pointer headersText	mr-2 " onClick={() => router.push('/discount')}> DISCOUNT-SALE</p>
+        <p className="mt-2  dis cursor-pointer headersText	mr-2 " onClick={() => router.push('/discount')}> DISCOUNT</p>
       </div>
       <hr className="border1 mt-3" />
 
