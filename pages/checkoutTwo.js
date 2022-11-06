@@ -206,8 +206,8 @@ const CheckoutTwo = () => {
           <div>
             <input placeholder='Your email address' className='email_Input_bar' />
           </div>
-          <div className='button_email'>
-            <a onClick={() => { signIn() }} className='shipping_text'  >Continue</a>
+          <div onClick={() => { signIn() }} className='button_email'>
+            <a  className='shipping_text'  >Continue</a>
           </div>
         </div>
         <p className='shipping_text mt-10'>Sign up with your socials</p>

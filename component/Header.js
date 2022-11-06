@@ -35,8 +35,7 @@ function Header() {
             src="https://img.icons8.com/ios/50/undefined/search--v3.png"
           />
           <img
-            onClick={() => router.push('/auth')}
-            className="navIcon"
+onClick={() => { signIn() }}            className="navIcon"
             src="https://img.icons8.com/ios/50/undefined/user--v3.png"
           />
 
