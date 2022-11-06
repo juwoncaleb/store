@@ -20,7 +20,7 @@ export default function Shoe() {
 
       <p className="headerText text-3xl md:text-8xl mt-5 mb-5">The New Collection</p>
 
-      <img className="menfashion ml-auto mr-auto  " src="menfashion.png" />
+      <img className="menfashion ml-auto mr-auto  " src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667684354/uploads/pdprvwvlgdjtmgolcsl8.png" />
 
       <p className="text-3xl mb-20 justify-start menChoice "> Men</p>
 
@@ -35,14 +35,14 @@ export default function Shoe() {
         </div>
         <div className="row-end-3 row-span-2 ...">
           <div className=" "  >
-            <img onClick={() => router.push('/casual')} className="cursor-pointer mt-20 imgOption " src="bro.jfif" />
+            <img onClick={() => router.push('/summerFine')} className="cursor-pointer mt-20 imgOption " src="bro.jfif" />
             <p className=" text-1xl md:text-2xl flex  "> Casual</p>
             <hr className="textline_2" />
 
 
           </div>
         </div>
-        <div className="row-start-2 row-span-2 ...">  <div className="menStyleGrid_third" onClick={() => router.push('/office')}>
+        <div className="row-start-2 row-span-2 ...">  <div className="menStyleGrid_third" onClick={() => router.push('/summerFine')}>
           <img className="cursor-pointer imgOption  " src="work.jpg" />
           <p className="headerText text-1xl md:text-2xl flex  "> Office</p>
           <hr className="textline_3" />
@@ -54,7 +54,7 @@ export default function Shoe() {
 
       <div className="grid grid-rows-3 grid-flow-col gap-4 md:ml-10 mb-10">
         <div className="row-start-2 row-span-2 ...">
-          <div className="" onClick={() => router.push('/urban')}>
+          <div className="" onClick={() => router.push('/summerFine')}>
             <img className="cursor-pointer imgOption   " src="sk.jpg" />
             <p className="headerText text-1xl md:text-2xl flex  "> Urban</p>
             <hr className="textline_6" />
@@ -65,14 +65,14 @@ export default function Shoe() {
 
         <div className="row-end-3 row-span-2 ...">
 
-          <div className="cursor-pointer " onClick={() => router.push('/comfort')}>
+          <div className="cursor-pointer " onClick={() => router.push('/summerFine')}>
             <img className=" imgOption " src="ss.jpg" />
             <p className="headerText text-1xl md:text-2xl flex textFix"> Comfort</p>
             <hr className="textline_4 textFix" />
 
           </div>
         </div>
-        <div className="row-start-2 row-span-2 ..."><div className=" " onClick={() => router.push('/retro')}>
+        <div className="row-start-2 row-span-2 ..."><div className=" " onClick={() => router.push('/summerFine')}>
           <img className=" cursor-pointer imgOption " src="jerry.jpg" />
           <p className="headerText text-1xl md:text-2xl flex  " > Retro</p>
           <hr className="textline_5" />
@@ -133,37 +133,37 @@ export default function Shoe() {
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="dread.png" />
+          <img className="topPick" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688470/uploads/r9tsvznmq6wnrlv05syg.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="short.png" />
+          <img className="topPick" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688849/uploads/zwgcgielxxzycvhoziv3.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="sweat.png" />
+          <img className="topPick" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693043/uploads/otgofasn9dsmworrafxv.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="kofi.jpg" />
+          <img className="topPick" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690523/uploads/rchylb3ofgr1g3gl6spw.png" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="dread.png" />
+          <img className="topPick" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690326/uploads/zf5ymn5e5qgxvhwjxeb5.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="short.png" />
+          <img className="topPick" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690326/uploads/zf5ymn5e5qgxvhwjxeb5.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="sweat.png" />
+          <img className="topPick" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688849/uploads/zwgcgielxxzycvhoziv3.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
