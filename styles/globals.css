@@ -849,9 +849,10 @@ tr:nth-child(even) {
   width: 300px;
 }
 
-@media only screen and (max-width: 425px) {
+
+@media only screen and (max-width: 623px) {
   .productGrid {
-    margin-left: 70px;
+    margin-left: 25%;
   }
 }
 
