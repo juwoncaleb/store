@@ -102,13 +102,13 @@
 @media only screen and (max-width: 581px) {
   .headersText {
     font-size: 10px;
-    margin-right: 10px;
+    margin-right: 12px;
   }
 }
 
 @media only screen and (max-width: 414px) {
   .headersText {
-    font-size: 9px;
+    font-size: 11px;
   }
 }
 
@@ -537,22 +537,21 @@ h1 {
   left: 20px;
   font-size: 30px;
 }
+.fitz{
+  margin-right: 50%
+}
+.countz{
+  position: relative;
+  left: 100px;
+}
 
 @media only screen and (max-width: 768px) {
   .fits {
   display: grid;
 
   }
-  .itemsize{
-    margin-left: 40px;
-
-  }
   .itt{
-    margin-left: 100px;
-  }
-  .count{
-    margin-left: 60px;
-margin-top: 10px;
+    margin-left: 55%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -852,7 +851,7 @@ tr:nth-child(even) {
 
 @media only screen and (max-width: 623px) {
   .productGrid {
-    margin-left: 25%;
+    margin-left: 15%;
   }
 }
 

@@ -35,8 +35,8 @@ export default function Item({ productItem }) {
             <div className='ml-auto mr-auto mt-4 description'>
                 <hr className='description_line' />
                 <p>Sizes</p>
-                <div className='flex justify-between'>
-                    <div className='flex fits'>
+            
+                    <div className=' fitz'>
 
                         <div className="itt flex  ">
                             <div className="flex itemmSize mt-2">
@@ -72,14 +72,16 @@ export default function Item({ productItem }) {
                                 >
                                     S
                                 </p>
+                            
                             </div>
                         </div>
-                        <p className='itemsize mt-2 '>{itemSize}</p>
-                        <p className="ml-20 smallerText font-semibold	count"><span onClick={() => setAmount(amount++)} className="cursor-pointer">+</span>{amount} <span className="cursor-pointer" onClick={() => setAmount(amount--)}> -</span></p>
+                        <p className='itemsize mt-1 countz'>{itemSize}</p>
+
+                        <p className=" countz smallerText font-semibold	count"><span onClick={() => setAmount(amount++)} className="cursor-pointer">+</span>{amount} <span className="cursor-pointer" onClick={() => setAmount(amount--)}> -</span></p>
 
                     </div>
 
-                </div>
+                
                 <div onClick={addToCart} className='bg-black bag mt-10 cursor-pointer'>
                     <p className='text-center text-white bagText '>Add to bag</p>
                 </div>
