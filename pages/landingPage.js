@@ -94,7 +94,7 @@ export default function LandingPage() {
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690001/uploads/ag2rrn4pxeenw1uoixjc.jpg" />
+            <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693043/uploads/otgofasn9dsmworrafxv.png" />
 
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
@@ -118,7 +118,7 @@ export default function LandingPage() {
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
-            <img className="grid-item grid-item-8" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690001/uploads/ag2rrn4pxeenw1uoixjc.jpg" alt="" />
+            <img className="grid-item grid-item-8" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693201/uploads/si10dgfbcemwjqvbrjdq.png" alt="" />
             <p>Lacoste RGB</p>
             <p>$200</p>          </div>
           <div>
@@ -141,11 +141,11 @@ export default function LandingPage() {
         <div className="containerTop">
           <div className="container">
             <div className="card">
-              <img src="heroimg.jpg" />
+              <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693504/uploads/d2xhqzcaj2qoos8unpbp.png" />
               <div className="card__head">SUMMER COLLECTION</div>
             </div>
             <div className="card">
-              <img src="teal.png" />
+              <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693604/uploads/pveyfocq1dvzaogacoce.png" />
               <div className="card__head">TYLER AND FRIENDS</div>
             </div>
             <div className="card">
