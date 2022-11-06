@@ -51,7 +51,6 @@ const CheckoutTwo = () => {
 
         <div className='flex justify-around checkou'>
           <div className='mr-20'>
-            <a onClick={() => { signOut() }} className='checkoutHeader text-left ml-40' >GROUND - FREE</a>
 
 
             <div className=' flex justify-around pl-20 mt-4'>
