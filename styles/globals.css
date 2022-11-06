@@ -537,6 +537,11 @@ h1 {
   left: 20px;
   font-size: 30px;
 }
+@media only screen and (max-width: 768px) {
+  .fitz{
+    margin-right: 70%
+  }
+}
 .fitz{
   margin-right: 50%
 }
@@ -857,7 +862,7 @@ tr:nth-child(even) {
 
 @media only screen and (max-width: 768px) {
   .deleteItemIcon {
-    margin-right: 10px;
+    margin-right: 160px;
   }
 }
 
