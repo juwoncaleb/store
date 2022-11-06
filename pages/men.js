@@ -133,17 +133,17 @@ export default function Men() {
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="dread.png" />
+          <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688470/uploads/r9tsvznmq6wnrlv05syg.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="short.png" />
+          <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667688849/uploads/zwgcgielxxzycvhoziv3.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="sweat.png" />
+          <img className="" src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693043/uploads/otgofasn9dsmworrafxv.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
@@ -153,7 +153,7 @@ export default function Men() {
             <p>$200</p> 
           </div>
           <div>
-            <img className="topPick" src="dread.png" />
+          <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667690326/uploads/zf5ymn5e5qgxvhwjxeb5.png" />
             <p>Lacoste RGB</p>
             <p>$200</p> 
           </div>
