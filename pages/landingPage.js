@@ -6,8 +6,8 @@ export default function LandingPage() {
   return (
     <div className="App">
       <Header/>
-      <div className="landingPage_text">
-        <p className="text-6xl md:text-8xl landingPage_MainText">
+      <div className="landingPage_text ">
+        <p className="text-6xl md:text-8xl  landingPage_MainText">
           Memorial Day
         </p>
         <p className="text-5xl md:text-8xl landingPage_MainText">
@@ -18,7 +18,7 @@ export default function LandingPage() {
           40% off storewide with code FORTYOFF
         </p>
       </div>
-      <img className="backgroundImage" src="new.png" />
+      <img className="backgroundImage " src="new.png" />
 
       <p className="category">Lacoste Wardtobe Essentials</p>
 

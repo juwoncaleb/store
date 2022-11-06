@@ -161,7 +161,7 @@ p {
 
 
 .backgroundImage {
-  margin-top: 20px;
+  margin-top: 100px;
   height: 1000px;
   position: relative;
   margin-left: auto;
@@ -531,7 +531,10 @@ h1 {
 .world {
   margin-left: 5%;
 }
-
+.sizes{
+  margin-left: 50%;
+  margin-right: 50%;
+}
 .lacoste_Text {
   position: relative;
   left: 20px;
@@ -543,7 +546,11 @@ h1 {
   }
 }
 .fitz{
-  margin-right: 50%
+  margin-right: 20%;
+}
+.itt{
+  margin-right: 100px;
+
 }
 .countz{
   position: relative;
@@ -886,7 +893,11 @@ tr:nth-child(even) {
 
 
 }
-
+.headerFixed{
+  background: white;
+  z-index: 1;
+  
+}
 @media only screen and (max-width: 575px) {
   .finalcart{
     font-size: 13px!important;

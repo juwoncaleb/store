@@ -36,10 +36,9 @@ export default function Item({ productItem }) {
                 <hr className='description_line' />
                 <p>Sizes</p>
             
-                    <div className=' fitz'>
+                    <div className=' fitz '>
 
-                        <div className="itt flex  ">
-                            <div className="flex itemmSize mt-2">
+                    <div className="flex sizes mt-2">
                                 <p
                                     onClick={() => {
                                         setItemSize("Extra-Large");
@@ -74,7 +73,6 @@ export default function Item({ productItem }) {
                                 </p>
                             
                             </div>
-                        </div>
                         <p className='itemsize mt-1 countz'>{itemSize}</p>
 
                         <p className=" countz smallerText font-semibold	count"><span onClick={() => setAmount(amount++)} className="cursor-pointer">+</span>{amount} <span className="cursor-pointer" onClick={() => setAmount(amount--)}> -</span></p>

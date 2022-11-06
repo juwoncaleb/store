@@ -8,7 +8,7 @@ function Header() {
   console.log(orderQuantity);
   return (
 
-    <div className="">
+    <div className="headerFixed ">
 
       <div className="flex justify-between">
         <div className="flex justify-between lefticon">
