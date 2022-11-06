@@ -61,13 +61,13 @@ const CheckoutTwo = () => {
                 to 10 working days from when it is shipped . Due to precautionary measures  at the warehouse
               </p>
             </div>
-            <p className='checkoutHeader text-left ml-40 mt-10' >EXPRESS DELIVERY - $20</p>
+            <p  className='checkoutHeader text-left ml-40 mt-10' >EXPRESS DELIVERY - $20</p>
 
 
             <div className=' flex justify-center mb-10 pl-20 mt-4'>
               <input type='checkbox' />
               <p className="smallerText ">Based on national delays with the shipping providers , packages arrives within 5
-                to 10 working days from when it is shipped . Due to precautionary measures  at the warehouse
+                to 10 working <span onClick={()=>{signOut()}}>days</span> from when it is shipped . Due to precautionary measures  at the warehouse
               </p>
             </div>
           </div>
