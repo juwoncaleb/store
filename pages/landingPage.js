@@ -141,7 +141,7 @@ export default function LandingPage() {
         <div className="containerTop">
           <div className="container">
             <div className="card">
-              <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693504/uploads/d2xhqzcaj2qoos8unpbp.png" />
+              <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693985/uploads/uzaehe6yb7fdifeo97zc.png" />
               <div className="card__head">SUMMER COLLECTION</div>
             </div>
             <div className="card">
@@ -149,7 +149,7 @@ export default function LandingPage() {
               <div className="card__head">TYLER AND FRIENDS</div>
             </div>
             <div className="card">
-              <img src="mjh.png" />
+            <img src="https://res.cloudinary.com/ddjlsw268/image/upload/v1667693504/uploads/d2xhqzcaj2qoos8unpbp.png" />
               <div className="card__head">TEES</div>
             </div>
             <div className="card">
